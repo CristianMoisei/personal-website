@@ -1,0 +1,95 @@
+.step{
+    padding: 30px 30px 28px 30px;
+    margin-top: 15px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.all-rounded-corners{
+    border-radius: 10px !important;
+}
+
+.step .content{
+    margin-left: 70px;
+}
+
+#exploratory{
+    background-color: #d1f0ff;
+}
+
+#validation{
+    background-color: #d8f1d9;
+}
+
+.step h4{
+    font-size: 25px;
+    font-family:"Tisa W01 Medium", serif;
+    margin: 0;
+}
+
+.step #number{
+    float: left;
+    font-size: 35px;
+    font-family:"Tisa W01 Regular", serif;
+    position: relative;
+    top: -10px;
+    opacity: 0.3;
+}
+
+.step li{
+    margin: 5px 0;
+}
+
+.step ul{
+    margin: 20px 0 0 0;
+    padding-left: 21px;
+}
+
+.step-footer#exploratory{
+    background-color: #9fdcf6 !important;
+}
+
+.step-footer#validation{
+    background-color: #b5e3b2 !important;
+}
+
+.step-footer{
+    padding: 10px 30px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0;
+    font-size: 16px !important;
+}
+
+#process-footer{
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    margin: 50px 0;
+}
+
+#process-footer p{
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+}
+
+#process-footer .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+#process-footer .legend-item{
+    width: 200px;
+}

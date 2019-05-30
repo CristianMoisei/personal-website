@@ -1,0 +1,359 @@
+@media screen and (min-width: 1025px) {
+
+.sweep {
+  display: inline-block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  border: none;
+  font-family: "Tisa W01 Medium", serif;
+  padding: 1px;
+}
+
+.sweep:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: -2px;
+  width: 102%;
+  right: 0;
+  bottom: 7px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.sweep:hover:before, .sweep:focus:before, .sweep:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#screencloud-link:before{
+  background: #fccf00;
+}
+
+#makeitcheaper-link:before{
+  background: #19D7C5;
+}
+
+#glofox-link:before{
+  background: #b8f17a;
+}
+
+#hyperion-link:before{
+  background: #a6e2f9;
+}
+
+#generic-link:before{
+  background: #e1e3e6;
+}
+
+.view-project:hover{
+  opacity: 1 !important;
+}
+
+.view-project:before {
+  content: "";
+  border-radius: 4px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.view-project:hover:before, .view-project:focus:before, .view-project:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+#glofox-view-project:before{
+  background: #fff;
+}
+
+#glofox-view-project:hover{
+  border: 1px solid #fff;
+}
+
+#webfaction-view-project:hover, #eq-view-project:hover {
+  border: 1px solid #000;
+}
+
+#glofox-view-project:hover span, #glofox-view-project:hover i{
+  color: #2b4ea4 !important;
+  text-decoration: none;
+}
+
+#webfaction-view-project:before, #eq-view-project:before{
+  background: #000;
+}
+
+#webfaction-view-project:hover span, #webfaction-view-project:hover i {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+#eq-view-project:hover span, #eq-view-project:hover i {
+  color: #e6edf4 !important;
+  text-decoration: none;
+}
+
+
+/* Ripples */
+/* Behance Ripple */
+
+@-webkit-keyframes behance-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #c9ddff solid 3px;
+    }
+  }
+
+  @keyframes behance-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #bcd5ff solid 3px;
+    }
+  }
+
+  .behance-ripple {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+  }
+
+  .behance-ripple:before {
+    content: '';
+    position: absolute;
+    border: #e4eeff solid 3px;
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    border-radius: 30px;
+  }
+  .behance-ripple:hover:before, .behance-ripple:focus:before, .behance-ripple:active:before {
+    -webkit-animation-name: behance-ripple;
+    animation-name: behance-ripple;
+  }
+
+  /* Github Ripple */
+  @-webkit-keyframes github-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #cccdcf solid 3px;
+    }
+  }
+
+  @keyframes github-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #ebebeb solid 3px;
+    }
+  }
+
+  .github-ripple {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+  }
+  .github-ripple:before {
+    content: '';
+    position: absolute;
+    border: #eaebeb solid 3px;
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    border-radius: 30px;
+  }
+  .github-ripple:hover:before, .github-ripple:focus:before, .github-ripple:active:before {
+    -webkit-animation-name: github-ripple;
+    animation-name: github-ripple;
+  }
+
+  /* Hyperion Ripple */
+  @-webkit-keyframes hyperion-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #d2f3fd solid 3px;
+    }
+  }
+
+  @keyframes hyperion-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #d2f3fd solid 3px;
+    }
+  }
+
+  .hyperion-ripple {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+  }
+  .hyperion-ripple:before {
+    content: '';
+    position: absolute;
+    border: #e8f7fe solid 3px;
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    border-radius: 30px;
+  }
+  .hyperion-ripple:hover:before, .hyperion-ripple:focus:before, .hyperion-ripple:active:before {
+    -webkit-animation-name: hyperion-ripple;
+    animation-name: hyperion-ripple;
+  }
+
+}
+
+/* PH Ripple */
+@-webkit-keyframes ph-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #FFEBE7 solid 3px;
+    }
+  }
+
+  @keyframes ph-ripple {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -8px;
+      left: -12px;
+      opacity: 0;
+      border: #FFEBE7 solid 3px;
+    }
+  }
+
+  .ph-ripple {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+  }
+  .ph-ripple:before {
+    content: '';
+    position: absolute;
+    border: #FFEBE7 solid 3px;
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    border-radius: 30px;
+  }
+  .ph-ripple:hover:before, .ph-ripple:focus:before, .ph-ripple:active:before {
+    -webkit-animation-name: ph-ripple;
+    animation-name: ph-ripple;
+  }
+
+
+
+/* Next Project Button Ripple */
+@-webkit-keyframes next-ripple {
+  100% {
+    top: -14px;
+    right: -14px;
+    bottom: -14px;
+    left: -14px;
+    opacity: 0;
+    border: #dadada solid 3px;
+  }
+}
+
+@keyframes next-ripple {
+  100% {
+    top: -14px;
+    right: -14px;
+    bottom: -14px;
+    left: -14px;
+    opacity: 0;
+    border: #dadada solid 3px;
+  }
+}
+
+.next-ripple {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+}
+
+.next-ripple:before {
+  content: '';
+  position: absolute;
+  border: #f0f0f0 solid 3px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  border-radius: 10px;
+}
+.next-ripple:hover:before, .next-ripple:focus:before, .next-ripple:active:before {
+  -webkit-animation-name: next-ripple;
+  animation-name: next-ripple;
+}

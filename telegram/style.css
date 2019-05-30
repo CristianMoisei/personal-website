@@ -1,0 +1,76 @@
+body {
+    font-family:"Tisa W01 Light", serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 50px;
+    margin: 100px 0 0 105px;
+}
+
+h2{
+    font-size: 35px;
+    margin-top: 50px;
+    opacity: 0.5;
+}
+
+h3{
+    font-family:"Tisa W01 Medium", serif;
+    margin-top: 50px;
+}
+
+p{
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    cursor: zoom-in;
+    border-radius: 16px;
+    margin: 10px 0 80px 0;
+}
+
+#logo{
+    float: left;
+    width: 85px;
+}
+
+#logo img{
+    margin: 0 30px 0 0;
+}
+
+.main-container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.block{
+    margin: 0 100px;
+}
+
+#fb{
+    color: #0084ff;
+    font-family:"Tisa W01 Medium", serif;
+}
+
+#whatsapp{
+    color: #30bd5a;
+    font-family:"Tisa W01 Medium", serif;
+}
+
+#google{
+    color: #ee1a21;
+    font-family:"Tisa W01 Medium", serif;
+}
+
+#last{
+    margin-bottom: 60px;
+}
+
+#bold{
+    font-family:"Tisa W01 Medium", serif;
+}

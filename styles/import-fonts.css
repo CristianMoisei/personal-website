@@ -1,0 +1,23 @@
+/* @import url("http://fast.../fonts.net/t/1.css?apiType=css&projectid=b4314e71-83d8-4cc4-bd90-9ceb4a5339d0"); */
+@font-face{
+    font-family:"Tisa W01 Light";
+    src:url("../fonts/63d98d82-cdc2-4f22-8883-bede07823185.eot?#iefix");
+    src:url("../fonts/63d98d82-cdc2-4f22-8883-bede07823185.eot?#iefix") format("eot"),url("../fonts/163f4b9f-d9b9-42c5-9098-d70e0016ae27.woff2") format("woff2"),url("../fonts/cc68d660-f674-409c-9be1-7f7f8bc0542a.woff") format("woff"),url("../fonts/2385d9d0-f23e-4d30-abb4-28817eda1254.ttf") format("truetype"),url("../fonts/a9d1c46b-d28d-4dab-8373-bbaf41232d7f.svg#a9d1c46b-d28d-4dab-8373-bbaf41232d7f") format("svg");
+}
+@font-face{
+    font-family:"Tisa W01 Regular";
+    src:url("../fonts/885a1883-0bbc-429a-91f5-c32e88a82b0e.eot?#iefix");
+    src:url("../fonts/885a1883-0bbc-429a-91f5-c32e88a82b0e.eot?#iefix") format("eot"),url("../fonts/36a5385d-e6c3-4aba-ad04-fa161f5c96b0.woff2") format("woff2"),url("../fonts/9b2fef91-4d32-413d-864e-4aaa363673eb.woff") format("woff"),url("../fonts/131d9e79-a2a5-4e3a-8cb9-e8acfcaa1c8a.ttf") format("truetype"),url("../fonts/419b1ef5-3ea5-43d3-8c3f-f68edc3d0a2b.svg#419b1ef5-3ea5-43d3-8c3f-f68edc3d0a2b") format("svg");
+}
+
+@font-face{
+    font-family:"Tisa W01 Medium";
+    src:url("../fonts/7901ab62-60f6-49a3-9332-359efb61e81b.eot?#iefix");
+    src:url("../fonts/7901ab62-60f6-49a3-9332-359efb61e81b.eot?#iefix") format("eot"),url("../fonts/785e7c0f-c445-4077-b412-1fd0a1a8ab06.woff2") format("woff2"),url("../fonts/7ee6ca7c-fe74-4640-a75d-939ea0bd637d.woff") format("woff"),url("../fonts/d76d30ec-b31a-4502-acf4-89812c16447e.ttf") format("truetype"),url("../fonts/9ce8adf1-e8ae-4095-84d3-6b2f836cd33e.svg#9ce8adf1-e8ae-4095-84d3-6b2f836cd33e") format("svg");
+}
+
+@font-face{
+    font-family:"Tisa W01 Bold";
+    src:url("../fonts/0b58340f-a8ca-4e68-8eab-bfda350b0b58.eot?#iefix");
+    src:url("../fonts/0b58340f-a8ca-4e68-8eab-bfda350b0b58.eot?#iefix") format("eot"),url("../fonts/02a4b96f-e988-44fe-a0e7-57ff1b610f3b.woff2") format("woff2"),url("../fonts/78d1ac04-d453-4364-8326-035a105b0865.woff") format("woff"),url("../fonts/776e5c1b-6939-4b32-9c0d-2dee7c34c7da.ttf") format("truetype"),url("../fonts/edc51787-36cf-434d-a4f1-b04139da6bfc.svg#edc51787-36cf-434d-a4f1-b04139da6bfc") format("svg");
+}

@@ -1,0 +1,307 @@
+@media screen and (max-width: 960px) {
+
+    #glofox-block, #webfaction-block, #eq-block, #mic-block{
+        display: none;
+    }
+
+    #mobile-projects{
+        display: inline;
+        width: 100%;
+    }
+
+    #mobile-projects img{
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .narrow-container, .full-width-button {
+        max-width: 600px !important;
+    }
+
+    .back-button {
+        margin-left: -55px;
+        margin-top: 22px;
+    }
+
+    .project-image, .royalSlider, .royalSlider img, .rsImg, .rsSlide{
+        border-radius: 0 !important;
+    }
+
+    .project-image{
+        width: 100% !important;
+        background-size: 100% 100%;
+    }
+
+    #webfaction-01 {
+        margin: 0 auto !important;
+        width: 100% !important;
+        height: 66.44vw !important;
+    }
+
+    #webfaction-02 {
+        width: 100% !important;
+        height: 46.55vw !important;
+    }
+
+    #webfaction-03-expanded{
+        width: 100% !important;
+        height: 790.94vw !important;    
+    }
+
+    #webfaction-04-expanded{
+        width: 100% !important;
+        height: 522.38vw !important;
+    }
+
+    #webfaction-05{
+        width: 100% !important;
+        height: 70vw !important;
+    }
+
+    #eq-01{
+        margin: 0 auto !important;
+        width: 100% !important;
+        height: 66.66vw !important;
+    }
+      
+    #eq-02{
+        width: 100% !important;
+        height: 66.66vw !important;
+    }
+      
+    #eq-03{
+        width: 100% !important;
+        height: 75vw !important;
+    }
+
+    #glofox-01{
+        margin: 0 auto !important;
+        width: 100% !important;
+        height: 61vw !important;
+    }
+
+    #mic-01{
+        margin: 0 auto !important;
+        width: 100% !important;
+        height: 61vw !important;
+    }
+
+    #mic-02 {
+        width: 100% !important;
+        height: 46.55vw !important;
+    }
+
+    #mic-03 {
+        width: 100% !important;
+        height: 220vw !important;
+    }
+
+    #mic-04 {
+        width: 100% !important;
+        height: 175vw !important;
+    }
+
+    #mic-05{
+        width: 100% !important;
+        height: 725.65vw !important;    
+    }
+
+    #glofox-02{
+        width: 100% !important;
+        height: 60vw !important;
+    }
+
+    #glofox-03, #glofox-04, #glofox-05, #glofox-06, #glofox-07, #glofox-08, #glofox-09, #glofox-10, #glofox-11, #glofox-12, #glofox-13, #glofox-14, #glofox-15 {
+        width: 100% !important;
+        height: 66vw !important;
+    }
+
+    #glofox-site-01-expanded{
+        width: 100% !important;
+        height: 555.2vw !important;
+    }
+
+    #glofox-site-02-expanded{
+        width: 100% !important;
+        height: 781.6vw !important;
+    }
+
+    #glofox-site-03-expanded{
+        width: 100% !important;
+        height: 288.6vw !important;
+    }
+
+    .mobile-show{
+        display: inline;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    #footer{
+        border-top: none;
+    }
+
+    /*ROYAL SLIDER*/
+  
+   .royalSlider {
+    margin: 0 auto -70px auto;
+    max-width: 900px;
+    margin-bottom: 0;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  .icon-arrow-left, .icon-arrow-right{
+    display: none;
+  }
+  
+  .icon-arrow-left{
+    left: -60px;
+  }
+  
+  .icon-arrow-right{
+    right: -60px;
+  }
+  
+  .royalSlider__images {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    h1 {
+        font-size: 40px;
+        margin: 0 0 30px 0;
+    }
+
+    .smaller-mobile-header{
+        font-size: 36px;
+    }
+    
+    h2{
+        font-size: 36px !important;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 24px !important;
+    }
+
+    #info p{
+        font-size: 17px;
+    }
+
+    #header-block{
+        padding: 80px 40px 100px 40px;
+    }
+
+    #social {
+        display: none;
+    }
+
+    #mobile-social {
+        display: inline;
+    }
+
+    #mobile-social img{
+        width: 65px;
+    }
+
+    #footer{
+        padding: 40px 0 50px 0;
+        text-align: center;
+    }
+
+    #webfaction-03, #webfaction-04, #webfaction-03::after, #webfaction-04::after {
+        width: 100% !important;
+        height: 320px !important;    
+    }
+
+    .tags span{
+        width: 100%;
+    }
+
+    .narrow-container {
+        padding: 70px 40px 20px 40px !important;
+    }
+
+    .back-button{
+        display: none;
+    }
+
+    .step .content{
+        margin-left: 0px;
+    }
+
+    .step #number{
+        float: right;
+        top: 0px;
+    }
+
+    .step-footer{
+        padding: 20px 30px;
+        line-height: 1.5;
+    }
+
+    .continue-navigation{
+        display: inline-block !important;
+    }
+
+    .full-width-button{
+        /* margin: 40px 40px 0 40px !important; */
+    }
+
+    #glyph{
+        display: none;
+    }
+
+    #rest-of-quote{
+        margin-left: 0 !important;
+    }
+
+    .person img{
+        width: 50px !important;
+    }
+
+    .person #name {
+        font-size: 18px !important;
+    }
+
+    .person .text {
+        margin: 30px 0 0 65px !important;
+    }
+
+    .person span{
+        display: none;
+    }
+
+    .image-info{
+        margin: 8px 20px 30px 20px !important;
+        opacity: 0.3 !important;
+    }
+
+    .image-info p{
+        line-height: 1.3;
+    }
+
+    .mobile-no-padding{
+        padding-top: 10px !important;
+    }
+
+    .mobile-no-margin{
+        margin-top: 0 !important;
+    }
+
+    .modal-content{
+        width: 240px;
+    }
+}

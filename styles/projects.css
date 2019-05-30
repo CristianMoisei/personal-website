@@ -1,0 +1,540 @@
+.narrow-container{
+    padding: 70px 0 20px 0;
+}
+
+.no-padding{
+    padding-top: 0 !important;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.expand{
+  display: block;
+  margin: 30px auto 60px auto;
+  border: none;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  background-color: #fff;
+  text-decoration: underline;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  opacity: .4;
+}
+
+.expand:hover{
+  opacity: .6;
+}
+
+.full-width-button{
+  max-width: 650px;
+  display: block;
+  margin: 40px auto 0 auto;
+  text-align: center;
+  border-radius: 8px;
+  position: relative !important;
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 20px 0;
+}
+
+.full-width-button:hover{
+  transform: scale(0.985);
+  cursor: pointer;
+}
+
+.image-info{
+  text-align: center;
+  max-width: 650px;
+  margin: 8px auto 50px auto;
+  opacity: 0.4;
+}
+
+.image-info p{
+  font-family: "San Francisco", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#glofox-01{
+  background-image: url("../images/glofox/glofox-01.jpg");
+  margin: 60px auto 0 auto;
+  height: 500px;
+}
+
+#glofox-02{
+  background-image: url("../images/glofox/glofox-02.jpg");
+  margin: 0 auto;
+  height: 520px;
+}
+
+#glofox-03, #glofox-04, #glofox-05, #glofox-06, #glofox-07, #glofox-08, #glofox-09, #glofox-10, #glofox-11, #glofox-12, #glofox-13, #glofox-14, #glofox-15 {
+  margin: 0 auto;
+  height: 600px;
+}
+
+#glofox-03{
+  background-image: url("../images/glofox/interface-01.jpg");
+}
+
+#glofox-04{
+  background-image: url("../images/glofox/interface-02.jpg");
+}
+
+#glofox-05{
+  background-image: url("../images/glofox/interface-03.jpg");
+}
+
+#glofox-06{
+  background-image: url("../images/glofox/interface-04.jpg");
+}
+
+#glofox-07{
+  background-image: url("../images/glofox/interface-05.jpg");
+}
+
+#glofox-08{
+  background-image: url("../images/glofox/interface-06.jpg");
+}
+
+#glofox-09{
+  background-image: url("../images/glofox/interface-07.jpg");
+}
+
+#glofox-10{
+  background-image: url("../images/glofox/interface-08.jpg");
+}
+
+#glofox-11{
+  background-image: url("../images/glofox/interface-09.jpg");
+}
+
+#glofox-12{
+  background-image: url("../images/glofox/interface-10.jpg");
+}
+
+#glofox-13{
+  background-image: url("../images/glofox/interface-11.jpg");
+}
+
+#glofox-14{
+  background-image: url("../images/glofox/interface-12.jpg");
+}
+
+#glofox-15{
+  background-image: url("../images/glofox/interface-13.jpg");
+}
+
+#glofox-site-01{
+  background-image: url("../images/glofox/glofox-site-01.jpg");
+  margin: 0 auto;
+  height: 650px;
+  background-position: center top;
+}
+
+#glofox-site-01-expanded{
+  background-image: url("../images/glofox/glofox-site-01.jpg");
+  margin: 0 auto;
+  background-position: center top;
+  height: 4997px;
+}
+
+#glofox-site-02{
+  background-image: url("../images/glofox/glofox-site-02.jpg");
+  margin: 0 auto;
+  height: 650px;
+  background-position: center top;
+}
+
+#glofox-site-02-expanded{
+  background-image: url("../images/glofox/glofox-site-02.jpg");
+  margin: 0 auto;
+  background-position: center top;
+  height: 7034px;
+}
+
+#glofox-site-03{
+  background-image: url("../images/glofox/glofox-site-03.jpg");
+  margin: 0 auto;
+  height: 650px;
+  background-position: center top;
+}
+
+#glofox-site-03-expanded{
+  background-image: url("../images/glofox/glofox-site-03.jpg");
+  margin: 0 auto;
+  background-position: center top;
+  height: 2597px;
+}
+
+#glofox-site-01::after, #glofox-site-02::after, #glofox-site-03::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 650px;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 70%, rgba(255,255,255) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 70%,rgba(255,255,255) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%);
+}
+
+
+#webfaction-01{
+  background-image: url("../images/webfaction/webfaction-01.jpg");
+  margin: 60px auto 0 auto;
+  height: 500px;
+}
+
+#webfaction-02{
+  background-image: url("../images/webfaction/webfaction-02.jpg");
+  margin: 0 auto;
+  height: 400px;
+}
+
+#webfaction-03{
+  background-image: url("../images/webfaction/webfaction-03.jpg");
+  margin: 0 auto;
+  height: 1000px;
+  background-position: center top;
+}
+
+#webfaction-03-expanded{
+  background-image: url("../images/webfaction/webfaction-03.jpg");
+  margin: 0 auto;
+  background-position: center top;
+  height: 7110px;
+}
+
+#webfaction-04{
+  background-image: url("../images/webfaction/webfaction-04.jpg");
+  margin: 0 auto;
+  height: 1000px;
+  background-position: center top;
+}
+
+#webfaction-04-expanded{
+  background-image: url("../images/webfaction/webfaction-04.jpg");
+  margin: 0 auto;
+  background-position: center top;
+  height: 4700px;
+}
+
+#webfaction-05{
+  background-image: url("../images/webfaction/webfaction-05.jpg");
+  margin: 0 auto;
+  height: 540px;
+  background-position: center top;
+}
+
+#webfaction-03::after, #webfaction-04::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1000px;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 70%, rgba(255,255,255) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 70%,rgba(255,255,255) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%);
+}
+
+#eq-01{
+  background-image: url("../images/eq-playbook/eq-01.jpg");
+  margin: 60px auto 0 auto;
+  height: 500px;
+}
+
+#eq-02{
+  background-image: url("../images/eq-playbook/eq-02.jpg");
+  margin: 0 auto;
+  height: 600px;
+}
+
+#eq-03{
+  background-image: url("../images/eq-playbook/eq-03.jpg");
+  margin: 0 auto;
+  height: 600px;
+}
+
+#mic-01{
+  background-image: url("../images/mic/mic-01.jpg");
+  background-position: center top;
+  margin: 60px auto 0 auto;
+  height: 500px;
+}
+
+#mic-02{
+  background-image: url("../images/mic/mic-02.jpg");
+  margin: 0 auto;
+  height: 400px;
+}
+
+#mic-03{
+  background-image: url("../images/mic/mic-03.jpg");
+  margin: 0 auto;
+  height: 2000px;
+}
+
+#mic-04{
+  background-image: url("../images/mic/mic-04.jpg");
+  margin: 0 auto;
+  height: 1580px;
+}
+
+#mic-05{
+  background-image: url("../images/mic/mic-05.jpg");
+  margin: 0 auto;
+  height: 6489px;
+  background-position: center top;
+}
+
+.project-image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  max-width: 900px;
+}
+
+h4{
+  font-size: 28px;
+  margin: 50px 0 20px 0;
+}
+
+.first-h4{
+  margin: 0 0 20px 0;
+}
+
+.tags{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tags span{
+  font-family: "San Francisco", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: bold;
+  display:inline;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 5px 10px 0;
+}
+
+#problems span{
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+#solutions span{
+  background-color: #ddecff;
+  color: #0f3161;
+}
+
+#mic-tags{
+}
+
+#mic-tags span{
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#mic-tags h6{
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  line-height: 1.5;  
+}
+
+#mic-tags p{
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.back-button{
+  top: 46px !important;
+}
+  
+  
+/*ROYAL SLIDER*/
+  
+.royalSlider {
+  margin: 0 auto -70px auto;
+  max-width: 900px;
+  margin-bottom: 0;
+  border-radius: 15px;
+  width: auto !important;
+  height: auto !important;
+}
+
+
+.royalSlider img, .rsImg{
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 15px;
+}
+
+.rsSlide{
+  border-radius: 15px;
+}
+
+.royalSlider > * {
+  float: none !important;
+}
+
+.icon-arrow-left, .icon-arrow-right{
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.icon-arrow-left{
+  left: -60px;
+}
+
+.icon-arrow-right{
+  right: -60px;
+}
+
+.royalSlider__images {
+  width: 100%;
+  height: 100%;
+}
+
+.rsBullets{
+  position: relative;
+  z-index: 35;
+  padding-top: 10px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 5px;
+  overflow: hidden;
+  opacity: 0.7 !important;
+}
+
+.rsBullet{
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  padding: 6px;
+}
+
+.rsBullet.rsNavSelected span{
+  background-color: #7e8597;
+  opacity: 1.0;
+}
+
+.rsBullet span{
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #7e8597;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 1024px) {
+  .rsBullets{display: none;}
+}
+
+.project-nav{
+  margin: 50px 0 30px 0;
+  padding: 15px 20px 10px 25px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.project-nav:hover{
+  transform: scale(0.99);
+  cursor: pointer;
+}
+
+.project-nav p{
+  margin: 0;
+  padding: 0;
+}
+
+.project-nav-container, .project-nav-container:hover{
+  text-decoration: none !important;
+}
+
+.project-nav p.small{
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "San Francisco", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.project-nav p.large{
+  font-size: 22px;
+  margin-top: -5px;
+  font-family:"Tisa W01 Light", serif;
+}
+
+.project-nav i{
+  float: right;
+  margin-top: -36px;
+  margin-right: 20px;
+  opacity: .5;
+}
+
+
+.quote-block{
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
+}
+
+.quote-block p{
+    margin: 0;
+    opacity: 0.6;
+}
+
+.quote-block #glyph{
+    width: 55px;
+    opacity: 0.1;
+    float: left;
+}
+
+.quote-block #rest-of-quote{
+  margin-left: 85px;
+  margin-top: -12px;
+}
+
+.quote-block img{
+  width: 65px;
+  float: left;
+}
+
+.quote-block #name{
+  font-size: 24px;
+  font-family:"Tisa W01 Medium", serif;
+  margin-top: -6px;
+}
+
+.quote-block #title{
+  font-size: 17px;
+  margin-top: -10px;
+}
+
+.quote-block .text{
+  margin: 30px 0 0 85px;
+}
+
+.feedback-widget{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 500px;
+  display: none;
+  /* opacity: 0; */
+  transition:opacity 0.5s;
+  overflow:hidden;
+}
