@@ -64,7 +64,7 @@
 
 .view-project:before {
   content: "";
-  border-radius: 4px;
+  border-radius: 6px;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -89,15 +89,15 @@
 }
 
 
-#glofox-view-project:before{
+#glofox-view-project:before, #thrive-view-project:before{
   background: #fff;
 }
 
-#glofox-view-project:hover{
+#glofox-view-project:hover, #thrive-view-project:hover {
   border: 1px solid #fff;
 }
 
-#webfaction-view-project:hover, #eq-view-project:hover {
+#webfaction-view-project:hover {
   border: 1px solid #000;
 }
 
@@ -106,17 +106,17 @@
   text-decoration: none;
 }
 
-#webfaction-view-project:before, #eq-view-project:before{
-  background: #000;
-}
-
-#webfaction-view-project:hover span, #webfaction-view-project:hover i {
-  color: #fff !important;
+#thrive-view-project:hover span, #thrive-view-project:hover i{
+  color: #121416 !important;
   text-decoration: none;
 }
 
-#eq-view-project:hover span, #eq-view-project:hover i {
-  color: #e6edf4 !important;
+#webfaction-view-project:before {
+  background: #000;
+} 
+
+#webfaction-view-project:hover span, #webfaction-view-project:hover i {
+  color: #fff !important;
   text-decoration: none;
 }
 
@@ -320,7 +320,7 @@
     bottom: -14px;
     left: -14px;
     opacity: 0;
-    border: #dadada solid 3px;
+    /* border: #dadada solid 3px; */
   }
 }
 
@@ -331,7 +331,7 @@
     bottom: -14px;
     left: -14px;
     opacity: 0;
-    border: #dadada solid 3px;
+    /* border: #dadada solid 3px; */
   }
 }
 
@@ -353,7 +353,33 @@
   animation-duration: 0.8s;
   border-radius: 10px;
 }
+
 .next-ripple:hover:before, .next-ripple:focus:before, .next-ripple:active:before {
+  -webkit-animation-name: next-ripple;
+  animation-name: next-ripple;
+}
+
+
+.next-ripple-dark {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+}
+
+.next-ripple-dark:before {
+  content: '';
+  position: absolute;
+  border: #202224 solid 3px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  border-radius: 10px;
+}
+
+.next-ripple-dark:hover:before, .next-ripple-dark:focus:before, .next-ripple-dark:active:before {
   -webkit-animation-name: next-ripple;
   animation-name: next-ripple;
 }

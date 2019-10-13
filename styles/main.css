@@ -54,12 +54,16 @@ h3{
     margin-right: auto;
 }
 
-.container img {
+/* .container img {
     display: none;
-}
+} */
 
 .bold {
     font-family: "Tisa W01 Medium", serif;
+}
+
+.light {
+    opacity: 0.6;
 }
 
 .inline {
@@ -166,7 +170,7 @@ h3{
     padding: 14px 24px !important;
     cursor: pointer;
     position: relative;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 20px;
     border: 1px solid #000;
     z-index: 1;
@@ -289,33 +293,50 @@ h3{
 
 /* EQ Playbook Section */
 
-#eq-block {
-    background-color: #e6edf4;
-    height: 660px;
-    padding-top: 100px;
+#thrive-block {
+    background-color: #121416;
+    color: white;
+    height: 620px;
+    padding-top: 130px;
 }
 
-#eq-block .container{
-    background-image: url("../images/eq-playbook.png");
+#thrive-block .container{
+    background-image: url("../images/thrive.png");
     background-size: 640px 666px;
     background-repeat: no-repeat;
     height: 100%;
 }
 
-#eq-img{
+#thrive-img{
     z-index: -1;
     width: 640px;
     float: left;
     margin-top: 60px;
 }
 
-#eq-block .container .text{
-    padding: 50px 0 0 460px;
+#thrive-block #featured {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#thrive-block #featured :first-child {
+    margin-right: 20px;
+}
+
+#thrive-block #featured img{
+    opacity: 0.7;
+    height: 36px;
+}
+
+#thrive-block .container .text{
+    padding: 85px 0 0 460px;
     width: 365px;
 }
 
-#eq-block .view-project{
-    border: 1px solid rgba(0, 0, 0, 0.8);
+#thrive-block .view-project{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* MIC Section */
