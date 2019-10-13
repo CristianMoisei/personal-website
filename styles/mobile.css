@@ -58,20 +58,20 @@
         height: 70vw !important;
     }
 
-    #eq-01{
+    #thrive-01 {
         margin: 0 auto !important;
         width: 100% !important;
         height: 66.66vw !important;
     }
       
-    #eq-02{
+    #thrive-02, #thrive-03, #thrive-04, #thrive-05, #thrive-06, #thrive-07, #thrive-08, #thrive-09, #thrive-10, #thrive-11, #thrive-12, #thrive-13 {
         width: 100% !important;
         height: 66.66vw !important;
     }
       
-    #eq-03{
+    #thrive-14 {
         width: 100% !important;
-        height: 75vw !important;
+        height: 85vw !important;
     }
 
     #glofox-01{
