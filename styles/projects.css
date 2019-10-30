@@ -249,6 +249,11 @@ a {
   color: white;
 }
 
+#thrive ::selection {
+    background: #fff; 
+    color: #272c35;
+}
+
 #thrive a {
   color: white;
 }
