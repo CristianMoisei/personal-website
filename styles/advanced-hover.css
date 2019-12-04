@@ -1,4 +1,4 @@
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 900px) {
 
 /* SWEEPS */
 
@@ -45,7 +45,7 @@
 }
 
 #webfaction-view-project, #mic-view-project {
-  background-image: linear-gradient(to right, black 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(to right, #0F1E2C 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 
@@ -55,7 +55,7 @@
 }
 
 #webfaction-view-project:hover {
-  border: 1px solid #000;
+  border: 1px solid #0F1E2C;
 }
 
 #glofox-view-project:hover span, #glofox-view-project:hover i{

@@ -27,17 +27,15 @@
 
 .step h4{
     font-size: 25px;
-    font-family:"Tisa W01 Medium", serif;
     margin: 0;
 }
 
 .step #number{
     float: left;
     font-size: 35px;
-    font-family:"Tisa W01 Regular", serif;
     position: relative;
-    top: -10px;
-    opacity: 0.3;
+    top: -4px;
+    opacity: 0.2;
 }
 
 .step li{

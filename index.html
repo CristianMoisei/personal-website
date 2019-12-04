@@ -16,12 +16,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
     <script src="scripts/show-contact-details.js"></script>
+    <script src="scripts/scroll-to.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
 </head>
 
 <body id="body">
     <div class="container" id="header-block">
-        <h2>Hi, I'm Cristian, a Product (UX+UI) Designer and Consultant from London.</h2>
-        <p>I was formerly a UX Manager at <a class="sweep" id="makeitcheaper-link" href="https://www.makeitcheaper.com" target="_blank">Make It Cheaper</a> and the Lead Product Designer at <a class="sweep" id="screencloud-link" href="https://www.screen.cloud" target="_blank">ScreenCloud</a> and <a class="sweep" id="glofox-link" href="https://www.glofox.com" target="_blank">Glofox</a>. Before that I ran a design studio called <a class="sweep" id="hyperion-link" href="https://studio-hyperion.uk" target="_blank">Hyperion</a>, for 4 years. I also design and develop iOS apps in my spare time, two of which were featured by Apple on the App Store.</p>
+        <h2>Hi, I'm Cristian, a UX+UI Designer and Product Consultant from London.</h2>
+        <p>I was formerly a UX Manager at <a class="sweep" id="makeitcheaper-link" href="https://www.makeitcheaper.com" target="_blank">Make It Cheaper</a> and the Lead Product Designer at <a class="sweep" id="screencloud-link" href="https://www.screen.cloud" target="_blank">ScreenCloud</a> and <a class="sweep" id="glofox-link" href="https://www.glofox.com" target="_blank">Glofox</a>. Before that I ran a design studio called <a class="sweep" id="hyperion-link" href="https://studio-hyperion.uk" target="_blank">Hyperion</a> for 4 years. I also design and develop iOS apps in my spare time, two of which were <a class="sweep" onclick="smoothScroll()">featured by Apple on the App Store.</a></p>
     
         <div id="info">
             <a class="sweep" href="docs/cristian.pdf" target="_blank">CV</a>
@@ -33,23 +36,25 @@
 
     <div id="glofox-block">
         <div class="container">
-                <div class="text">
-                    <h1 style="color:#3d75d7; opacity: 1;" class="number">01.</h1>
-                    <h1>Reinventing Glofox's interface for a complex user base</h1>
-                    <a href="projects/glofox.html">
-                        <div class="view-project sweep" id="glofox-view-project">
-                            <span>View Project</span>
-                            <i class="fas fa-arrow-right" id="glofox-arrow"></i>
-                        </div>
-                    </a>
-                </div>
+            <img src="images/glofox.png">
+            <div class="text">
+                <h1 style="color:#6C95E9; opacity: 1;" class="number">Case study #1</h1>
+                <h1>Reinventing Glofox's interface for a complex user base</h1>
+                <a href="projects/glofox.html">
+                    <div class="view-project sweep" id="glofox-view-project">
+                        <span>View Project</span>
+                        <i class="fas fa-arrow-right" id="glofox-arrow"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
     <div id="mic-block">
         <div class="container">
+            <img src="images/mic.jpg">
             <div class="text">
-                <h1 class="number">02.</h1>
+                <h1 class="number">Case study #2</h1>
                 <h1>Building MIC's digital experience from scratch</h1>
                 <a href="projects/mic.php">
                     <div class="view-project sweep" id="webfaction-view-project">
@@ -63,12 +68,10 @@
 
     <div id="thrive-block">
         <div class="container">
+            <img id="thrive-main" src="images/thrive.png">
             <div class="text">
-                <div id="featured">
-                    <a href="https://apps.apple.com/us/app/thrive-goals-ideas-decisions/id1472954301?ls=1" target="_blank"><img class="featured" src="images/apple.svg"></a>
-                    <a href="https://www.producthunt.com/posts/thrive-b91dd4e7-5dcd-425b-a78c-227ca7cbfe03" target="_blank"><img class="featured" src="images/product-hunt.svg"></a>
-                </div>
-                <h1>Launching my own iOS app</h1>
+                <a href="images/thrive/thrive-13.jpg" target="_blank"><img class="featured" src="images/apple.svg"></a>
+                <h1>Launching Thrive, my own iOS app</h1>
                 <a href="projects/thrive.html">
                     <div class="view-project sweep" id="thrive-view-project">
                         <span>View Project</span>
@@ -82,7 +85,7 @@
     <div id="webfaction-block">
         <div class="container">
             <div class="text">
-                <h1 class="number">04.</h1>
+                <h1 class="number">Case study #4</h1>
                 <h1>Helping Webfaction attract a less technical audience</h1>
                 <a href="projects/webfaction.html">
                     <div class="view-project sweep" id="webfaction-view-project">
@@ -91,6 +94,7 @@
                     </div>
                 </a>
             </div>
+            <img src="images/webfaction.png">
         </div>
     </div>
 
@@ -98,7 +102,7 @@
     <div id="mobile-projects">
         <a href="projects/glofox.html"><img src="images/mobile-glofox.jpg"></a>
         <a href="projects/mic.php"><img src="images/mobile-mic.jpg"></a>
-        <a href="projects/thrive.html"><img src="images/mobile-thrive.jpg"></a>
+        <a href="projects/thrive.html"><img id="mobile-thrive-image" src="images/mobile-thrive.jpg"></a>
         <a href="projects/webfaction.html"><img src="images/mobile-webfaction.jpg"></a>
     </div>
 
