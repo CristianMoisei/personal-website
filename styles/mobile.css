@@ -196,12 +196,18 @@
         font-size: 24px !important;
     }
 
-    #info p{
-        font-size: 17px;
+    #info {
+        display: flex;
+        flex-flow: column;
+    }
+
+    #info a {
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     #header-block{
-        padding: 80px 40px 100px 40px;
+        padding: 80px 40px 50px 40px;
     }
 
     #social {

@@ -1,98 +1,55 @@
 @media screen and (min-width: 1025px) {
 
+/* SWEEPS */
+
 .sweep {
-  display: inline-block;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  border: none;
-  font-family: "Tisa W01 Medium", serif;
-  padding: 1px;
+  background: none;  
+  background-image: linear-gradient(to right, #e1e3e6 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 50%;
+  background-position: right bottom;
+  background-clip: padding-box;
+  transition:all 0.2s ease-out;
 }
 
-.sweep:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 6px;
-  left: -2px;
-  width: 102%;
-  right: 0;
-  bottom: 7px;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+.sweep:hover {
+    background-position: left bottom;
 }
 
-.sweep:hover:before, .sweep:focus:before, .sweep:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+
+/* Specific customisations */
+/* These IDs are responsible for customising the background colour of links at the top */
+#screencloud-link {
+  background-image: linear-gradient(to right, #fccf00 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-#screencloud-link:before{
-  background: #fccf00;
+#makeitcheaper-link{
+  background-image: linear-gradient(to right, #19D7C5 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-#makeitcheaper-link:before{
-  background: #19D7C5;
+#glofox-link{
+  background-image: linear-gradient(to right, #b8f17a 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-#glofox-link:before{
-  background: #b8f17a;
+#hyperion-link{
+  background-image: linear-gradient(to right, #a6e2f9 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-#hyperion-link:before{
-  background: #a6e2f9;
-}
 
-#generic-link:before{
-  background: #e1e3e6;
-}
-
+/* These IDs and classes are responsible for customising the background colour of the view project buttons */
 .view-project:hover{
   opacity: 1 !important;
 }
 
-.view-project:before {
-  content: "";
-  border-radius: 6px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+#glofox-view-project, #thrive-view-project {
+  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 50%);
 }
 
-.view-project:hover:before, .view-project:focus:before, .view-project:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+#webfaction-view-project, #mic-view-project {
+  background-image: linear-gradient(to right, black 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 
-#glofox-view-project:before, #thrive-view-project:before{
-  background: #fff;
-}
-
+/* These IDs and classes are responsible for customising the text and border colours of the view project buttons */
 #glofox-view-project:hover, #thrive-view-project:hover {
   border: 1px solid #fff;
 }
@@ -111,19 +68,16 @@
   text-decoration: none;
 }
 
-#webfaction-view-project:before {
-  background: #000;
-} 
-
 #webfaction-view-project:hover span, #webfaction-view-project:hover i {
   color: #fff !important;
   text-decoration: none;
 }
 
 
-/* Ripples */
-/* Behance Ripple */
 
+/* RIPPLES */
+
+/* Behance Ripple */
 @-webkit-keyframes behance-ripple {
     100% {
       top: -12px;

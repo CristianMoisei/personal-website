@@ -199,11 +199,11 @@ h3{
 /* Personal Section */
 
 #header-block{
-    padding: 120px 50px 120px 50px;
+    padding: 120px 50px;
     z-index: 20;
 }
 
-#header-block a:hover{
+#header-block a:hover {
     text-decoration: underline;
 }
 
@@ -218,13 +218,17 @@ h3{
 }
 
 #info a{
-    font-family: "Tisa W01 Medium", serif;
-    position: relative;
-    left: -2px;
+    font-family: "San Francisco", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 22px;
+    margin-right: 10px;
 }
 
 #info a:hover{
-    opacity: 1;
+    text-decoration: none;
 }
 
 
