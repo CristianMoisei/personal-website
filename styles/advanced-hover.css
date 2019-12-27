@@ -3,37 +3,54 @@
 /* SWEEPS */
 
 .sweep {
-  background: none;  
-  background-image: linear-gradient(to right, #e1e3e6 50%, rgba(255, 255, 255, 0) 50%);
+  background: none;
+  background-image: linear-gradient(to right, rgba(225, 227, 230, 0) 50%, rgba(255, 255, 255, 0) 50%);
   background-size: 200% 50%;
   background-position: right bottom;
   background-clip: padding-box;
-  transition:all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .sweep:hover {
     background-position: left bottom;
+    background-image: linear-gradient(to right, rgba(225, 227, 230, 1) 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 
 /* Specific customisations */
-/* These IDs are responsible for customising the background colour of links at the top */
+/* These IDs are responsible for customising the background colour of links at the top. They use 0 alpha to fix a bug on non retina devices. */
 #screencloud-link {
-  background-image: linear-gradient(to right, #fccf00 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(to right, rgba(252, 207, 0, 0) 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 #makeitcheaper-link{
-  background-image: linear-gradient(to right, #19D7C5 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(to right, rgba(25, 215, 197, 0) 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 #glofox-link{
-  background-image: linear-gradient(to right, #b8f17a 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(to right, rgba(184, 241, 122, 0) 50%, rgba(255, 255, 255, 0) 50%);
 }
 
 #hyperion-link{
-  background-image: linear-gradient(to right, #a6e2f9 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(to right, rgba(166, 226, 249, 0) 50%, rgba(255, 255, 255, 0) 50%);
 }
 
+/* The hover effect then turns the colour of the gradient back to 1 alpha */
+#screencloud-link:hover {
+  background-image: linear-gradient(to right, rgba(252, 207, 0, 1) 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+#makeitcheaper-link:hover {
+  background-image: linear-gradient(to right, rgba(25, 215, 197, 1) 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+#glofox-link:hover{
+  background-image: linear-gradient(to right, rgba(184, 241, 122, 1) 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+#hyperion-link:hover{
+  background-image: linear-gradient(to right, rgba(166, 226, 249, 1) 50%, rgba(255, 255, 255, 0) 50%);
+}
 
 /* These IDs and classes are responsible for customising the background colour of the view project buttons */
 .view-project:hover{
