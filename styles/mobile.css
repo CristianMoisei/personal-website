@@ -197,7 +197,7 @@
         flex-flow: column;
     }
 
-    #info a {
+    #info div {
         margin-bottom: 20px;
         padding: 8px;
         text-align: center;
