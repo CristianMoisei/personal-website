@@ -69,4 +69,12 @@ $hyperion-link: rgb(166, 226, 249);
     background-image: linear-gradient(to right, rgba(15, 30, 44, 0.1) 50%, transparent 50%);
   }
 
+  .project-nav:hover{
+    background-image: linear-gradient(to right, rgba(15, 30, 44, 0.05) 50%, transparent 50%);
+  }
+
+  #light-background:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 50%, transparent 50%);
+  }
+
 }
