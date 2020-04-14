@@ -342,32 +342,72 @@ h4 {
 }
 
 #social {
-  margin-left: auto;
-  margin-right: auto;
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #social img {
-  height: 42px;
+  height: 30px;
+  padding-right: 8px;
 }
 
-#social a {
-  margin: 0 5px 0 5px;
-  border: none;
-  border-radius: 30px;
-  -webkit-transition: all .02s ease-in-out;
-  transition: all .02s ease-in-out;
+#social div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 20px 6px 10px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-#social a:hover {
-  -webkit-transform: scale(0.94);
-          transform: scale(0.94);
+#social div:hover {
+  -webkit-transform: scale(0.97) !important;
+          transform: scale(0.97) !important;
+}
+
+#social #social-hyperion {
+  background-color: #EBF7FD;
+  margin-right: 13px;
+}
+
+#social #social-hyperion p {
+  color: #588ABF;
+}
+
+#social #social-github {
+  background-color: #EBEBEB;
+  margin-right: 13px;
+}
+
+#social #social-behance {
+  background-color: #E6EEFD;
+  margin-right: 13px;
+}
+
+#social #social-behance p {
+  color: #2454F5;
+}
+
+#social #social-ph {
+  background-color: #FCECE8;
+}
+
+#social #social-ph p {
+  color: #D85630;
+}
+
+#social p {
+  padding-top: 1px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 #mobile-projects {
-  display: none;
-}
-
-#mobile-social {
   display: none;
 }
 

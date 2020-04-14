@@ -139,10 +139,6 @@
         display: none;
     }
 
-    #footer{
-        border-top: none;
-    }
-
     /*ROYAL SLIDER*/
   
    .royalSlider {
@@ -211,16 +207,16 @@
         padding: 80px 40px 50px 40px;
     }
 
-    #social {
+    #social div {
+        padding: 6px 20px; 
+    }
+
+    #social div p{
         display: none;
     }
 
-    #mobile-social {
-        display: inline;
-    }
-
-    #mobile-social img{
-        width: 65px;
+    #social div img {
+        padding-right: 0;
     }
 
     #footer{
