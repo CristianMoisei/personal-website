@@ -1,0 +1,36 @@
+@media screen and (min-width: 900px) {
+  .sweep {
+    background: none;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, transparent 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 50%;
+    background-position: right bottom;
+    background-clip: padding-box;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .sweep:hover {
+    background-position: left bottom;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #e1e3e6), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, #e1e3e6 50%, transparent 50%);
+  }
+  /* Specific customisations */
+  /* The hover effect then turns the colour of the gradient back to 1 alpha */
+  #screencloud-link:hover {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(var(#19d7c5), 1)), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, rgba(var(#19d7c5), 1) 50%, transparent 50%);
+  }
+  #makeitcheaper-link:hover {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #19d7c5), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, #19d7c5 50%, transparent 50%);
+  }
+  #glofox-link:hover {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #b8f17a), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, #b8f17a 50%, transparent 50%);
+  }
+  #hyperion-link:hover {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #a6e2f9), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, #a6e2f9 50%, transparent 50%);
+  }
+}
+/*# sourceMappingURL=hover-effects.css.map */

@@ -1,0 +1,72 @@
+// Colours
+$sc-link: rgb(252, 207, 0);
+$mic-link: rgb(25, 215, 197);
+$glofox-link: rgb(184, 241, 122);
+$hyperion-link: rgb(166, 226, 249);
+
+
+@media screen and (min-width: 900px) {
+
+  .link-sweep {
+    background: none;
+    background-image: linear-gradient(to right, transparent 50%, transparent 50%);
+    background-size: 200% 50%;
+    background-position: right bottom;
+    background-clip: padding-box;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .link-sweep:hover {
+      background-position: left bottom;
+      background-image: linear-gradient(to right, rgba(225, 227, 230, 1) 50%, transparent 50%);
+  }
+
+
+  // Specific customisations
+  // The hover effect then turns the colour of the gradient back to 1 alpha
+  #screencloud-link:hover {
+    background-image: linear-gradient(to right, rgba($sc-link, 1) 50%, transparent 50%);
+  }
+
+  #makeitcheaper-link:hover {
+    background-image: linear-gradient(to right, rgba($mic-link, 1) 50%, transparent 50%);
+  }
+
+  #glofox-link:hover{
+    background-image: linear-gradient(to right, rgba($glofox-link, 1) 50%, transparent 50%);
+  }
+
+  #hyperion-link:hover{
+    background-image: linear-gradient(to right, rgba($hyperion-link, 1) 50%, transparent 50%);
+  }
+
+
+
+  .button-sweep {
+    background-size: 200% 50%;
+    background-position: right bottom;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .button-sweep:hover {
+      transform: scale(0.97) !important;
+      background-position: left bottom;
+      background-image: linear-gradient(to right, rgba(15, 30, 44, 0.1) 50%, transparent 50%);
+  }
+
+  #glofox-view-project:hover{
+    background-image: linear-gradient(to right, rgba(153, 182, 240, 0.22) 50%, transparent 50%);
+  }
+
+  #thrive-view-project:hover{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.18) 50%, transparent 50%);
+  }
+
+  #info div:hover{
+    transform: scale(0.92) !important;
+    background-image: linear-gradient(to right, rgba(15, 30, 44, 0.1) 50%, transparent 50%);
+  }
+
+}
