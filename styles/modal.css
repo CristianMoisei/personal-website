@@ -19,6 +19,10 @@
     background-color: #fff;
     padding: 40px 40px 34px 40px;
     border-radius: 10px;
+
+    animation-name: modal;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
 }
 
 .modal-content #contact-details {
@@ -48,4 +52,16 @@
 
 .scroll-disabled{
     overflow: hidden;
+}
+
+@keyframes modal {
+    from {
+        transform: translate(-50%, -35%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
