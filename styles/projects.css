@@ -45,6 +45,7 @@ p {
   opacity: 1 !important;
   background-color: rgba(0, 0, 0, 0.06);
   padding: 20px 0;
+  text-decoration: none;
 }
 
 #full-width-button-dark {
@@ -52,8 +53,8 @@ p {
 }
 
 .full-width-button:hover{
-  transform: scale(0.985);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .image-info{

@@ -57,7 +57,7 @@
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(15, 30, 44, 0.1)), color-stop(50%, transparent));
     background-image: linear-gradient(to right, rgba(15, 30, 44, 0.1) 50%, transparent 50%);
   }
-  .project-nav:hover {
+  .project-nav:hover, .full-width-button:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(15, 30, 44, 0.05)), color-stop(50%, transparent));
     background-image: linear-gradient(to right, rgba(15, 30, 44, 0.05) 50%, transparent 50%);
   }
