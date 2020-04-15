@@ -207,15 +207,15 @@
         padding: 80px 40px 50px 40px;
     }
 
-    #links div {
+    #links a {
         padding: 6px 20px; 
     }
 
-    #links div p{
+    #links a p{
         display: none;
     }
 
-    #links div img {
+    #links a img {
         padding-right: 0;
     }
 

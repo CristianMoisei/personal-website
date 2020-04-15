@@ -363,15 +363,16 @@ h4 {
         padding-right: 8px;
     }
 
-    div {
+    a {
         display: flex;
         padding: 6px 20px 6px 10px;
         border-radius: 50px;
         cursor: pointer;
     }
 
-    div:hover {
+    a:hover {
         transform: scale(0.97) !important;
+        text-decoration: none;
     }
 
     #hyperion{
