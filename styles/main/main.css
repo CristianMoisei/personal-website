@@ -339,9 +339,10 @@ h4 {
 #footer #emoji {
   position: relative;
   top: 3px;
+  height: 24px;
 }
 
-#social {
+#links {
   font-family: sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,12 +352,12 @@ h4 {
           justify-content: center;
 }
 
-#social img {
+#links img {
   height: 30px;
   padding-right: 8px;
 }
 
-#social div {
+#links div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,43 +366,43 @@ h4 {
   cursor: pointer;
 }
 
-#social div:hover {
+#links div:hover {
   -webkit-transform: scale(0.97) !important;
           transform: scale(0.97) !important;
 }
 
-#social #social-hyperion {
+#links #hyperion {
   background-color: #EBF7FD;
   margin-right: 13px;
 }
 
-#social #social-hyperion p {
+#links #hyperion p {
   color: #588ABF;
 }
 
-#social #social-github {
+#links #github {
   background-color: #EBEBEB;
   margin-right: 13px;
 }
 
-#social #social-behance {
+#links #behance {
   background-color: #E6EEFD;
   margin-right: 13px;
 }
 
-#social #social-behance p {
+#links #behance p {
   color: #2454F5;
 }
 
-#social #social-ph {
+#links #ph {
   background-color: #FCECE8;
 }
 
-#social #social-ph p {
+#links #ph p {
   color: #D85630;
 }
 
-#social p {
+#links p {
   padding-top: 1px;
   font-size: 15px;
   font-weight: 400;

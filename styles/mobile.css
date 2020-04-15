@@ -207,15 +207,15 @@
         padding: 80px 40px 50px 40px;
     }
 
-    #social div {
+    #links div {
         padding: 6px 20px; 
     }
 
-    #social div p{
+    #links div p{
         display: none;
     }
 
-    #social div img {
+    #links div img {
         padding-right: 0;
     }
 

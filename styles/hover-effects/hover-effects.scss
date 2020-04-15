@@ -79,26 +79,24 @@ $hyperion-link: rgb(166, 226, 249);
   }
 
 
-  #social div:hover{
+  #links div:hover{
     transform: scale(0.92) !important;
   }
 
-  #social-hyperion:hover {
+  #hyperion:hover {
     background-image: linear-gradient(to right, darken(rgba(235, 247, 253, 1), 5%) 50%, transparent 50%);
   }
 
-  #social-github:hover {
+  #github:hover {
     background-image: linear-gradient(to right, darken(rgba(235, 235, 235, 1), 5%) 50%, transparent 50%);
   }
 
-  #social-behance:hover {
+  #behance:hover {
     background-image: linear-gradient(to right, darken(rgba(230, 238, 253, 1), 5%) 50%, transparent 50%);
   }
 
-  #social-ph:hover {
+  #ph:hover {
     background-image: linear-gradient(to right, darken(rgba(252, 236, 232, 1), 5%) 50%, transparent 50%);
   }
-
-  
 
 }

@@ -65,23 +65,23 @@
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.05)), color-stop(50%, transparent));
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 50%, transparent 50%);
   }
-  #social div:hover {
+  #links div:hover {
     -webkit-transform: scale(0.92) !important;
             transform: scale(0.92) !important;
   }
-  #social-hyperion:hover {
+  #hyperion:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #d4eefb), color-stop(50%, transparent));
     background-image: linear-gradient(to right, #d4eefb 50%, transparent 50%);
   }
-  #social-github:hover {
+  #github:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #dedede), color-stop(50%, transparent));
     background-image: linear-gradient(to right, #dedede 50%, transparent 50%);
   }
-  #social-behance:hover {
+  #behance:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #cedefb), color-stop(50%, transparent));
     background-image: linear-gradient(to right, #cedefb 50%, transparent 50%);
   }
-  #social-ph:hover {
+  #ph:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f9d9d1), color-stop(50%, transparent));
     background-image: linear-gradient(to right, #f9d9d1 50%, transparent 50%);
   }

@@ -349,10 +349,11 @@ h4 {
     #emoji {
         position: relative;
         top: 3px;
+        height: 24px;
     }
 }
 
-#social{
+#links{
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -373,24 +374,24 @@ h4 {
         transform: scale(0.97) !important;
     }
 
-    #social-hyperion{
+    #hyperion{
         background-color: #EBF7FD;        
         p { color: #588ABF }
         margin-right: 13px;
     }
 
-    #social-github{
+    #github{
         background-color: #EBEBEB;
         margin-right: 13px;
     }
 
-    #social-behance{
+    #behance{
         background-color: #E6EEFD;
         p { color: #2454F5 }
         margin-right: 13px;
     }
 
-    #social-ph{
+    #ph{
         background-color: #FCECE8;
         p { color: #D85630 }
     }
