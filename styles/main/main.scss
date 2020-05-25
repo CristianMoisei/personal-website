@@ -13,6 +13,10 @@ $text: #0F1E2C;
     background: $text;
 }
 
+img {
+    user-select: none;
+}
+
 body {
     font-family: 'geomanist', sans-serif;
     font-weight: 300;

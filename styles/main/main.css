@@ -13,6 +13,13 @@ h1, h2, h3, h4 {
   background: #0F1E2C;
 }
 
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   font-family: 'geomanist', sans-serif;
   font-weight: 300;

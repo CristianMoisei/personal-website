@@ -258,6 +258,10 @@ p {
     color: #272c35;
 }
 
+#thrive .rsSlide {
+  background: #272c35; /* Fixes an issue where the slider could flicker */ 
+}
+
 #thrive a {
   color: white;
 }
