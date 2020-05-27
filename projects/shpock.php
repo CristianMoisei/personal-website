@@ -2,6 +2,8 @@
 
 <html lang="en">
 
+        <?php include("../scripts/auth.php"); ?>
+
 <head>
         <title>Shpock - Meet Cristian</title>
         <meta charset="utf-8">
