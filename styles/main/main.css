@@ -41,7 +41,7 @@ a:hover {
 
 p {
   font-size: 19px;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 h1 {
@@ -62,7 +62,7 @@ h3 {
 }
 
 h4 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .container {
@@ -201,9 +201,16 @@ h4 {
   font-weight: 400;
 }
 
+.fa-lock {
+  margin: 0 8px 0 0;
+}
+
 #glofox-block {
   background-color: #2b4ea4;
   height: 680px;
+  max-width: 90%;
+  border-radius: 30px;
+  margin: 0 auto;
 }
 
 #glofox-block .number {
@@ -253,14 +260,17 @@ h4 {
   margin-left: 50px;
 }
 
-#mic-block .fa-lock {
-  margin: 0 8px 0 0;
+#mic-block i {
+  margin-left: 0;
 }
 
 #thrive-block {
   background-color: #121416;
   color: white;
   height: 570px;
+  max-width: 90%;
+  border-radius: 30px;
+  margin: 0 auto;
 }
 
 #thrive-block .container {
@@ -306,8 +316,39 @@ h4 {
   color: rgba(255, 255, 255, 0.6);
 }
 
+#shpock-block {
+  margin: 100px 0;
+}
+
+#shpock-block .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#shpock-block img {
+  width: 260px;
+  margin-right: 80px;
+}
+
+#shpock-block i {
+  margin-left: 0;
+}
+
 #webfaction-block {
   height: 740px;
+  background-color: #2E6CD1;
+  color: white;
+  max-width: 90%;
+  border-radius: 30px;
+  margin: 0 auto;
 }
 
 #webfaction-block img {
@@ -327,6 +368,11 @@ h4 {
   padding-top: 80px;
 }
 
+#webfaction-block .view-project {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
 #footer {
   padding: 50px 0 60px 0;
   text-align: center;
@@ -334,13 +380,14 @@ h4 {
 
 #footer .small {
   font-size: 14px;
-  opacity: 0.4;
-  margin: -5px 0 30px 0;
+  opacity: 0.5;
+  margin: -5px 0 20px 0;
 }
 
 #footer p {
   margin: 0;
   font-size: 24px;
+  line-height: 1.8;
 }
 
 #footer #emoji {
@@ -379,9 +426,16 @@ h4 {
   text-decoration: none;
 }
 
+#links > * {
+  margin-right: 13px;
+}
+
+#links :last-child {
+  margin-right: 0;
+}
+
 #links #hyperion {
   background-color: #EBF7FD;
-  margin-right: 13px;
 }
 
 #links #hyperion p {
@@ -390,12 +444,10 @@ h4 {
 
 #links #github {
   background-color: #EBEBEB;
-  margin-right: 13px;
 }
 
 #links #behance {
   background-color: #E6EEFD;
-  margin-right: 13px;
 }
 
 #links #behance p {

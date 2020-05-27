@@ -38,7 +38,7 @@ a {
 
 p {
     font-size: 19px; 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 h1{
@@ -59,7 +59,7 @@ h3{
 }
 
 h4 {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .container {
@@ -207,10 +207,17 @@ h4 {
     font-weight: 400;
 }
 
+.fa-lock{
+    margin: 0 8px 0 0;
+}
+
 
 #glofox-block{
     background-color: #2b4ea4;
     height: 680px;
+    max-width: 90%;
+    border-radius: 30px;
+    margin: 0 auto;
 
     .number {
         opacity: 1;
@@ -257,8 +264,8 @@ h4 {
         margin-left: 50px;
     }
 
-    .fa-lock{
-        margin: 0 8px 0 0;
+    i {
+        margin-left: 0;
     }
 }
 
@@ -268,6 +275,9 @@ h4 {
     background-color: #121416;
     color: white;
     height: 570px;
+    max-width: 90%;
+    border-radius: 30px;
+    margin: 0 auto;
 
     .container {
         position: relative;
@@ -312,9 +322,35 @@ h4 {
 }
 
 
+#shpock-block{
+
+    margin: 100px 0;
+    
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    img {
+        width: 260px;
+        margin-right: 80px;
+    }
+
+    i {
+        margin-left: 0;
+    }
+}
+
 
 #webfaction-block{
     height: 740px;
+    background-color: #2E6CD1;
+    color: white;
+    max-width: 90%;
+    border-radius: 30px;
+    margin: 0 auto;
+
 
     img {
         position: absolute;
@@ -332,6 +368,11 @@ h4 {
         z-index: 2;
         padding-top: 80px;
     }
+
+    .view-project{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.8);
+    }
 }
 
 
@@ -341,13 +382,14 @@ h4 {
 
     .small{
         font-size: 14px;
-        opacity: 0.4;
-        margin: -5px 0 30px 0;
+        opacity: 0.5;
+        margin: -5px 0 20px 0;
     }
 
     p {
         margin: 0;
         font-size: 24px;
+        line-height: 1.8;
     }
 
     #emoji {
@@ -379,21 +421,26 @@ h4 {
         text-decoration: none;
     }
 
+    > * {
+        margin-right: 13px;
+    }
+
+    :last-child {
+        margin-right: 0;
+    }
+
     #hyperion{
         background-color: #EBF7FD;        
         p { color: #588ABF }
-        margin-right: 13px;
     }
 
     #github{
         background-color: #EBEBEB;
-        margin-right: 13px;
     }
 
     #behance{
         background-color: #E6EEFD;
         p { color: #2454F5 }
-        margin-right: 13px;
     }
 
     #ph{

@@ -189,7 +189,26 @@ p {
   background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%);
 }
 
+/* Shpock */
+#shpock-01{
+  background-image: url("../images/shpock/shpock-01.jpg");
+  margin: 60px auto 0 auto;
+  height: 500px;
+}
 
+#shpock-02{
+  background-image: url("../images/shpock/ping-pong.jpg");
+  margin: 0 auto;
+  height: 500px;
+}
+
+#shpock-03{
+  background-image: url("../images/shpock/result.jpg");
+  margin: 0 auto;
+  height: 640px;
+}
+
+/* Webfaction */
 #webfaction-01{
   background-image: url("../images/webfaction/webfaction-01.jpg");
   margin: 60px auto 0 auto;
@@ -444,12 +463,12 @@ h4{
 }
 
 .tags span{
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0.8;
-  font-weight: 500;
-  display:inline;
+  font-weight: 400;
+  display: inline;
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin: 0 5px 10px 0;
 }
 
@@ -593,6 +612,7 @@ h4{
 .project-nav p{
   margin: 0;
   padding: 0;
+  line-height: 1.8;
 }
 
 .project-nav-container, .project-nav-container:hover{
@@ -644,6 +664,7 @@ h4{
 .quote-block img{
   width: 65px;
   float: left;
+  border-radius: 100px;
 }
 
 .quote-block #name{
@@ -670,4 +691,37 @@ h4{
   /* opacity: 0; */
   transition:opacity 0.5s;
   overflow:hidden;
+}
+
+.grey-box{
+  background-color: rgba(18, 30, 43, 0.1);
+  padding: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 16px;
+  justify-items: space-between;
+}
+
+.grey-box h4{
+  margin: 0;
+  font-size: 24px;
+  padding-bottom: 6px;
+}
+
+.grey-box p{
+  margin: 0;
+  padding: 0;
+}
+
+.grey-box #result{
+  width: 110px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.grey-box #result h2{
+  font-size: 40px;
+  font-weight: 300;
+  padding-left: 10px;
 }

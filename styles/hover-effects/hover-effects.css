@@ -47,7 +47,7 @@
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(153, 182, 240, 0.22)), color-stop(50%, transparent));
     background-image: linear-gradient(to right, rgba(153, 182, 240, 0.22) 50%, transparent 50%);
   }
-  #thrive-view-project:hover {
+  #white-view-project:hover {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.18)), color-stop(50%, transparent));
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.18) 50%, transparent 50%);
   }
