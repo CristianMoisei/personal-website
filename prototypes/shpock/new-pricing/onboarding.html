@@ -1,0 +1,92 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <script>
+
+        var page = 0;
+
+        function advanceOnboarding(){
+            switch(page){
+                case 0: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-02.jpg';
+                    page = 1;
+                    break;
+
+                case 1: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-03.jpg';
+                    page = 2;
+                    break;
+
+                case 2: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-04.jpg';
+                    page = 3;
+                    break;
+                
+                case 3: 
+                    document.getElementById('slides').style.display = 'none';
+                    page = 4;
+                    break;
+            }
+        }
+
+        function backwardOnboarding(){
+            switch(page){
+                case 1: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-01.jpg';
+                    page = 0;
+                    break;
+
+                case 2: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-02.jpg';
+                    page = 1;
+                    break;
+                
+                case 3: 
+                    document.getElementById('slides').src = 'images/onboarding/onboarding-03.jpg';
+                    page = 2;
+                    break;
+            }
+        }
+
+
+    </script>
+
+    <body class="scroll-disabled">
+        <div id="main-container">
+
+            <img id="learn-more" src="images/onboarding/learn-more.png" onclick="this.style.display = 'none' ">
+
+
+            <img id="tooltip" src="images/onboarding/tooltip.jpg" usemap="#tooltip-map">
+            
+            <map name="tooltip-map">
+                <area onclick="document.getElementById('tooltip').style.display = 'none'" coords="10,590,360,680" shape="rect">
+            </map>
+            
+            <img id="slides" src="images/onboarding/onboarding-01.jpg" usemap="#slides-map">
+
+            <map name="slides-map">
+                <area onclick="document.getElementById('learn-more').style.display = 'inline'; " coords="120,550,250,580" shape="rect">
+                <area onclick="advanceOnboarding()" coords="300,650,360,717" shape="rect">
+                <area onclick="backwardOnboarding()" coords="40,650,100,717" shape="rect">
+            </map>
+
+            <img id="how-it-works" src="images/onboarding/onboarding-05.jpg" usemap="#how-it-works-map">
+
+            <map name="how-it-works-map">
+                <area href="list.html" coords="24,615,350,660" shape="rect">
+                <area onclick="location.reload();" coords="25,672,350,720" shape="rect">
+            </map>    
+
+
+        </div>
+
+        <div id="home-bar"></div>
+
+    </body>
+
+
+</html>

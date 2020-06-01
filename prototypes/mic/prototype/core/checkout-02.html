@@ -1,0 +1,236 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/yes-no.js"></script>
+
+    <script>
+        function openHelp(){
+            document.getElementById('help-overlay').style.display='inline';
+            document.getElementById('results-overlay').style.display='inline';
+        }
+    </script>
+
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+
+
+    <script>
+      var scrolled = false;
+
+      document.addEventListener('scroll', function() {
+        if (window.pageYOffset >= 100) {
+          document.getElementById('footer').classList.add('footer-in');
+          document.getElementById('footer').classList.remove('footer-out');
+
+          document.getElementById('switching-to').src=('img/switching-to-compact.png');
+          document.getElementById('switching-to').classList.add('sticky-header');
+
+          document.getElementById('content').style.marginTop='150px';
+
+          scrolled = true;
+        }
+        if (window.pageYOffset <= 100 && scrolled == true){
+          document.getElementById('footer').classList.add('footer-out');
+          document.getElementById('footer').classList.remove('footer-in');
+
+          document.getElementById('switching-to').src=('img/switching-to.jpg');
+          document.getElementById('switching-to').classList.remove('sticky-header');
+
+          document.getElementById('content').style.marginTop='0';
+
+          scrolled = false;
+        }
+      });
+
+      function showCompanySearchResults() {
+        if (event.target.value.length > 2) {
+          document.getElementById('company-search-results').classList.remove('hidden');
+        } else {
+          document.getElementById('company-search-results').classList.add('hidden');
+        }
+      };
+
+      function selectedCompanyName(companyData) {
+        if (companyData.companyNumber != undefined) {
+          document.getElementById('company-number').value = companyData.companyNumber;
+          document.getElementById('businessName').value = companyData.companyName;
+          document.getElementById('selected-company-name-manually').classList.add('hidden');
+          document.getElementById('autofilled-company-number').style.visibility = 'visible';
+          document.getElementById('company-number').classList.add('industry');
+
+          toggleTick(document.getElementById('autofilled-company-number'), 'tick4');
+          document.getElementById('tick4').classList.add('industry-tick');
+        } else {
+          document.getElementById('selected-company-name-manually').classList.remove('hidden');
+          document.getElementById('company-number').value = '';
+          document.getElementById('autofilled-company-number').style.visibility = 'hidden';
+          document.getElementById('company-number').classList.remove('industry');
+
+          toggleTick(document.getElementById('autofilled-company-number'), 'tick4');
+          document.getElementById('tick4').classList.remove('industry-tick');
+        }
+        document.getElementById('company-search-results').classList.add('hidden');
+      }
+    </script>
+</head>
+
+
+<body>
+    <div id="header">
+        <img id="logo" src="img/logo.jpg" onclick="window.history.back();">
+        <img id="phone" src="img/phone.jpg" onclick="showPhoneModal()">
+    </div>
+
+
+    <img onclick="document.getElementById('help-overlay').style.display='none'; document.getElementById('results-overlay').style.display='none'" id="help-overlay" src="img/tooltip.png">
+    <img onclick="document.getElementById('overlay').style.display='none';" id="overlay" src="img/overlay.png">
+    <img onclick="document.getElementById('results-overlay').style.display='none'; document.getElementById('help-overlay').style.display='none';" id="results-overlay" src="img/overlay-02.png">
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="img/call-modal.png">
+    <img id="overlay-02" src="img/overlay-02.png">
+
+    <img id="switching-to" src="img/switching-to.jpg">
+
+    <div id="content" class="content" style="margin-bottom: 90px;">
+
+            <div class="section">
+
+                    <!-- Full Name -->
+                    <div class="question">
+                        <label class="large-label">Full Name</label>
+                        <img onclick="openHelp()" id="help" src="img/help.png">
+                        <input id="full-name" type="text" name="business name" placeholder="e.g. John Smith" onblur="toggleTick(this, 'tick1')" /><img src="img/check.svg" class="tick" id="tick1" />
+                    </div>
+
+                    <!-- Job TItle -->
+                    <div class="question">
+                            <label class="large-label">Job Title</label>
+                            <img onclick="openHelp()" id="help" src="img/help.png">
+                            <input id="job-title" type="text" name="business name" placeholder="e.g. Director" onblur="toggleTick(this, 'tick2')" /><img src="img/check.svg" class="tick" id="tick2" />
+                    </div>
+
+                    <!-- Correspondence Address -->
+                    <div class="question">
+                            <label class="large-label">Correspondence Address</label>
+                            <img onclick="openHelp()" id="help" src="img/help.png">
+                            <input id="address" type="text" name="business name" placeholder="e.g. 112 Mincing Lane" onblur="toggleTick(this, 'tick3')" /><img src="img/check.svg" class="tick" id="tick3" />
+                    </div>
+
+                    <!-- Business Name -->
+                    <div class="question" style="margin: 10px 0 0 0;">
+                        <label class="large-label">Trading Name</label>
+                        <img onclick="openHelp()" id="help" src="img/help.png">
+                        <input oninput="showCompanySearchResults()" id="businessName" type="text" name="business name" placeholder="e.g. Acme Inc." onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <div id="company-search-results" class="search-results hidden">
+                      <ul>
+                        <li onclick="selectedCompanyName(this.dataset)" data-company-name="Make It Cheaper Limited" data-company-number="123456789">
+                          <strong>Make It Cheaper Limited</strong>
+                          <br />
+                          123456789
+                        </li>
+                        <li onclick="selectedCompanyName(this.dataset)" data-company-name="Make It LTD" data-company-number="987654321">
+                          <strong>Make It LTD</strong>
+                          <br />
+                          987654321
+                        </li>
+                        <li onclick="selectedCompanyName(this.dataset)" data-company-name="Make LTD" data-company-number="567894321">
+                          <strong>Make LTD</strong>
+                          <br />
+                          567894321
+                        </li>
+                        <li onclick="selectedCompanyName(this.dataset); toggleTick(document.getElementById('company-number'), 'tick4');">
+                          <strong>My company is not listed here</strong>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="hidden" id="selected-company-name-manually" style="margin-bottom: 20px;">
+                      <p id="checkout-paragraph">You selected to provide your Company name & number manually. Please fill the <strong>Trading name</strong> and the <strong>Company Registration Number</strong> fields. You can also try <a href="https://beta.companieshouse.gov.uk/search/companies" target="_blank">searching on Companies House</a> (opens in a new tab)</p>
+                    </div>
+
+                    <!-- Company Registration Number -->
+                    <div class="question">
+                        <label class="large-label">Company Registration Number</label>
+                        <img onclick="openHelp()" id="help" src="img/help.png">
+                        <input id="company-number" type="text" name="company-number" placeholder="e.g. 39232222" onblur="toggleTick(this, 'tick4')" /><img src="img/check.svg" class="tick" id="tick4" />
+                        <div class="autofilled" id="autofilled-company-number"><strong>Autofilled</strong></div>
+                    </div>
+            </div>
+
+
+            <div class="section">
+
+                    <!-- Account Holder Name -->
+                    <div class="question">
+                        <label class="large-label">Account Holder Name</label>
+                        <img onclick="openHelp()" id="help" src="img/help.png">
+                        <input id="businessName" type="text" name="business name" placeholder="e.g. John Smith" onblur="toggleTick(this, 'tick6')" /><img src="img/check.svg" class="tick" id="tick6" />
+                    </div>
+
+                    <!-- Account Number TItle -->
+                    <div class="question">
+                            <label class="large-label">Account Number</label>
+                            <img onclick="openHelp()" id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. 00000000" onblur="toggleTick(this, 'tick7')" /><img src="img/check.svg" class="tick" id="tick7" />
+                    </div>
+
+                    <!-- Sort Code -->
+                    <div class="question">
+                            <label class="large-label">Sort Code</label>
+                            <img onclick="openHelp()" id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. 00-00-00" onblur="toggleTick(this, 'tick8')" /><img src="img/check.svg" class="tick" id="tick8" />
+                    </div>
+
+                    <div class="question">
+                    <label class="large-label">Direct Debit Date</label>
+                    <img onclick="openHelp()" id="help" src="img/help.png">
+                    <input id="businessName" type="text" name="business name" placeholder="e.g. 10th" onblur="toggleTick(this, 'tick9')" /><img src="img/check.svg" class="tick" id="tick9" />
+                </div>
+
+            </div>
+
+        <!-- Industry Data Section -->
+        <div>
+            <div class="section">
+                <h3 style="margin-bottom:10px;">Would you like Make it Cheaper to save you time by handle your renewal next year for free?</h3>
+                <p id="extra-padding">With our exclusive <strong>Do It For You service</strong>, every time your contract is up for renewal, we can search through all our prices to find the right package.</p>
+                <img id="learn-more" src="img/learn-more.jpg">
+                    <ul class="toggles">
+                        <li>
+                            <label class="yes" id="yesLabel1" onclick="radioClick(this, 'noLabel1', 'yesButton1', 'noButton1')">
+                                <input type="radio" name="optradio">
+                                <img id="yesButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">Yes</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="no" id="noLabel1" onclick="radioClick(this, 'yesLabel1', 'noButton1', 'yesButton1');">
+                                <input type="radio" name="optradio">
+                                <img id="noButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">No</div>
+                            </label>
+                        </li>
+                    </ul>
+            </div>
+
+        </div>
+
+        <div class="sticky-footer" id="footer">
+            <a class="button" id="save-progress" href="save-quote.html" class="button">Save Progress</a>
+            <a class="button" id="next" href="checkout-03.html" class="button">Next</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

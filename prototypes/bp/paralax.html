@@ -1,0 +1,64 @@
+<html>
+
+<script>
+
+    var distance = 0;
+
+    document.addEventListener('scroll', function() {
+        distance = window.pageYOffset
+        document.getElementById('clients-image').style.left = (-distance + 400)*0.5
+    });
+    
+</script>
+
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+#home-1{
+    background-image: url('images/home-1.jpg');
+    height: 1205px;
+    background-size: 1366px 1205px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#home-2{
+    background-image: url('images/home-2.jpg');
+    height: 3791px;
+    background-size: 1366px 3791px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#clients{
+    overflow: scroll;
+}
+
+#clients-image{
+    height: 400px;
+    position: relative;
+    left: 0;
+}
+
+</style>
+
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="home-1"> </div>
+    <div id="clients">
+            <img id="clients-image" src="clients.jpg"></img>
+    </div>
+    <div id="home-2"></div>
+
+</body>
+
+
+</html>

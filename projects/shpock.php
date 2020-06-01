@@ -15,14 +15,14 @@
         <link rel="stylesheet" href="../styles/hover-effects/hover-effects.css">
         <link rel="stylesheet" href="../styles/mobile.css">
         <link rel="stylesheet" href="../styles/projects.css">
-        <link rel="stylesheet" href="../royalslider/royalslider.css">
+        <link rel="stylesheet" href="../scripts/royalslider/royalslider.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
-        <script src="../royalslider/jquery.easing-1.3.js"></script>
+        <script src="../scripts/royalslider/jquery.easing-1.3.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="../royalslider/jquery.royalslider.min.js"></script>
-        <script src="../royalslider/jquery.easing-1.3.js"></script>
-        <script src="../royalslider/royal-slider.js"></script>
+        <script type="text/javascript" src="../scripts/royalslider/jquery.royalslider.min.js"></script>
+        <script src="../scripts/royalslider/jquery.easing-1.3.js"></script>
+        <script src="../scripts/royalslider/royal-slider.js"></script>
 </head>
 
 
@@ -131,7 +131,7 @@
         <div class="narrow-container">
                 <h1>Some of the other projects I worked on</h1>
                 <p>Throughout my time with Shpock, I worked on several other projects aimed at increasing the same metrics and improving the experience.</p>
-                <p>The new item details section was one of the projects we user tested most extensively, and I even put together a fully interactive <a href="http://meet-cristian.com/shpock/managed-listings/" target="_blank"> coded prototype (mobile)</a> so we can have the level of fidelity we needed.</p>
+                <p>The new item details section was one of the projects we user tested most extensively, and I even put together a fully interactive <a href="http://meet-cristian.com/prototypes/shpock/managed-listings/" target="_blank"> coded prototype (mobile)</a> so we can have the level of fidelity we needed.</p>
                 <p>The new price component saw <span class="bold">75%</span> of people use the delivery cost estimates we designed (i.e. leave it unchanged).</p>
                 <p>Lastly, the sell tab is a collaborative effort between two squads and is part of a new effort to change users’ perception of the sort of marketplace Shpock is, while at the same time increasing the number of quality listings.</p>
         </div>

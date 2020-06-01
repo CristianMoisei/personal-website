@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./core/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="yes-no.js"></script>
+    <script>
+      function showPhoneModal() {
+        document.getElementById('call-modal').style.display='inline';
+        document.getElementById('overlay-02').style.display='inline';
+      }
+
+      function openHelp() {
+        document.getElementById('help-overlay').style.display='inline';
+        document.getElementById('results-overlay').style.display='inline';
+      }
+
+      var showWarning = false;
+
+      function redirectOrShowModalBasedOnSupplier() {
+        event.preventDefault();
+        var provider = document.getElementById('provider').value;
+
+        if (provider == 'British Gas') {
+            document.location.href = 'core/loading.html?suppliers=all&results=positive';
+        } else if (provider == 'Scottish Power') {
+          document.getElementById('modal-07').style.display='inline';
+        } else if (provider == 'EDF') {
+          document.getElementById('modal-06').style.display='inline';
+        } else {
+            document.location.href = 'core/loading.html?suppliers=all&results=negative';
+        }
+      };
+
+      function toggleTab(tabButton, tabsWrapperId, tabId) {
+        var tabs_buttons = document.getElementById(tabsWrapperId).getElementsByClassName('tabs-list-element__label');
+        var tabs = document.getElementById(tabsWrapperId).getElementsByClassName('tab-content');
+
+        for(var i = 0; i < tabs_buttons.length; i++) {
+          tabs_buttons[i].classList.remove('checked');
+          tabs_buttons[i].getElementsByClassName('check_img')[0].src = "./core/img/radio-unchecked.svg";
+        }
+        tabButton.classList.add('checked');
+        tabButton.getElementsByClassName('check_img')[0].src = "./core/img/radio-checked.svg"
+
+        for(var i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove('active');
+        }
+        document.getElementById(tabId).classList.add('active');
+      }
+    </script>
+</head>
+
+
+<body>
+    <div id="header">
+        <img id="logo" src="./core/img/logo.jpg" onclick="window.history.back();">
+        <a href="tel:0200000000"><img id="phone" src="./core/img/phone.jpg"></a>
+    </div>
+
+    <img onclick="document.getElementById('help-overlay').style.display='none'; document.getElementById('results-overlay').style.display='none'" id="help-overlay" src="./core/img/tooltip.png">
+    <img onclick="document.getElementById('overlay').style.display='none';" id="overlay" src="./core/img/overlay.png">
+    <img onclick="document.getElementById('results-overlay').style.display='none'; document.getElementById('help-overlay').style.display='none';" id="results-overlay" src="./core/img/overlay-02.png">
+
+    <a href="./core/loading.html?suppliers=all&results=negative">
+      <img id="modal-06" src="./core/img/negative-intercept.png">
+      <img id="modal-07" src="./core/img/medium-intercept.png">
+    </a>
+
+    <div class="content">
+
+        <div class="section">
+            <div class="question">
+                <label class="large-label">What would you like to compare?</label>
+                <img id="selector" style="width:100%; margin: 10px 0 30px 0;" src="./core/img/selector-01.jpg" usemap="#select-map">
+
+                <map name="select-map">
+                        <area onclick="document.getElementById('selector').src='./core/img/selector-02.jpg';" coords="0,0,190,120" shape="rect">
+                        <area onclick="document.getElementById('selector').src='./core/img/selector-03.jpg';" coords="200,0,400,130" shape="rect">
+
+                </map>
+            </div>
+        </div>
+
+        <!-- Postcode and Address -->
+        <div class="question">
+            <label class="large-label">Business Postcode and Address</label>
+            <img onclick="openHelp()" id="help" src="./core/img/help.png">
+            <input type="text" name="postcode" placeholder="e.g E14 0LU" onblur="toggleTick(this, 'tick1')" /><img src="./core/img/check.svg" class="tick" id="tick1" />
+            <input type="text" name="address" placeholder="Address (Type Postcode First)" onblur="toggleTick(this, 'tick1pt2')" /><img src="./core/img/check.svg" class="tick" id="tick1pt2" />
+        </div>
+
+        <!-- Industry Data Section -->
+        <div>
+            <div class="section">
+                <h3 style="margin-bottom:10px;">Do you want to auto-fill the next three questions based on your postcode?</h3>
+                <p id="extra-padding">We will search industry held data to retrieve details like your Meter Number (MPAN) number, estimated consumption and your supplier.</p>
+                    <ul class="toggles">
+                        <li>
+                            <label class="yes" id="yesLabel1" onclick="radioClick(this, 'noLabel1', 'yesButton1', 'noButton1');
+                            showWarning = true;
+                            document.getElementById('mpan').src=('core/img/mpan-02.jpg');
+                            ">
+                                <input type="radio" name="optradio">
+                                <img id="yesButton1" class="check_img" src="./core/img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">Yes</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="no" id="noLabel1" onclick="radioClick(this, 'yesLabel1', 'noButton1', 'yesButton1');
+                            showWarning = false;
+                            document.getElementById('mpan').src=('core/img/mpan-01.jpg');
+                            document.getElementById('confirm-text').style.display = 'none';
+                            document.getElementById('confirm-button').style.display = 'none';
+                            ">
+                                <input type="radio" name="optradio">
+                                <img id="noButton1" class="check_img" src="./core/img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">No</div>
+                            </label>
+                        </li>
+                    </ul>
+                    <label for="mpan" class="large-label">Meter Number (MPAN)</label>
+                    <img id="mpan" style="width: 100%; margin: 10px 0 25px 0;" src="core/img/mpan-01.jpg">
+
+                    <label for="consumption" class="large-label">Consumption</label>
+                    <img onclick="openHelp()" id="help" src="./core/img/help.png">
+                    <input type="number" placeholder="20000" id="consumption" name="consumption" onclick="
+                        if (showWarning == true){
+                            document.getElementById('confirm-text').style.display = 'block';
+                            document.getElementById('confirm-button').style.display = 'block';
+                        }
+
+                    " onblur="toggleTick(this, 'tick3')" /><img style="top: -80px;" src="./core/img/check.svg" class="tick" id="tick3" />
+                    <div class="autofilled" id="autofilled2"><strong>Autofilled with industry data</strong></div>
+                    <label for="provider" class="large-label">Supplier</label>
+                    <img onclick="openHelp()" id="help" src="./core/img/help.png">
+                    <select placeholder="Select Supplier" id="provider" name="provider" class="energy-select custom-select custom-select-lg"
+                    onfocusin="
+                    if (showWarning == true){
+                            document.getElementById('confirm-text').style.display = 'block';
+                            document.getElementById('confirm-button').style.display = 'block';
+                        }">
+                        <option value="Please Select" id="scotpow">Please Select</option>
+                        <option value="British Gas" id="scotpow">British Gas</option>
+                        <option value="Scottish Power">Scottish Power</option>
+                        <option value="EDF">EDF</option>
+                    </select>
+                    <div class="standalone-industry" id="autofilled3"><strong>Autofilled with industry data</strong></div>
+            </div>
+
+            <p id="confirm-text" style="display: none; margin-top: 30px;">Please note that making changes to these values can affect the accuracy of your quotes.</p>
+            <a id="confirm-button" style="display: none; opacity: 0.5; margin-top: 10px; max-width: 400px;" class="button">Confirm Changes</a>
+
+
+            <div class="section">
+                <!-- Contract Expiration Date -->
+                <div class="question">
+                  <h3 style="margin-bottom:10px;">What contract do you have?</h3>
+
+                  <div id="contract-date">
+                    <ul class="tabs-list">
+                      <li class="tabs-list-element">
+                        <label class="tabs-list-element__label" onclick="toggleTab(this, 'contract-date', 'tab1')">
+                            <input type="radio" name="fixed-contract">
+                            <img class="check_img" src="./core/img/radio-unchecked.svg" width="24px" height="24px" />
+                            <div class="check_txt">Fixed</div>
+                        </label>
+                      </li>
+
+                      <li class="tabs-list-element">
+                        <label class="tabs-list-element__label" onclick="toggleTab(this, 'contract-date', 'tab2')">
+                            <input type="radio" name="rolling-contract">
+                            <img class="check_img" src="./core/img/radio-unchecked.svg" width="24px" height="24px" />
+                            <div class="check_txt">Rolling</div>
+                        </label>
+                      </li>
+
+                      <li class="tabs-list-element">
+                        <label class="tabs-list-element__label" onclick="toggleTab(this, 'contract-date', 'tab3')">
+                            <input type="radio" name="new-property-contract">
+                            <img class="check_img" src="./core/img/radio-unchecked.svg" width="24px" height="24px" />
+                            <div class="check_txt">New Property</div>
+                        </label>
+                      </li>
+                    </ul>
+
+                    <div class="tabs-content">
+                      <div class="tab-content" id="tab1">
+                        <label class="large-label">Contract Expiration Date</label>
+                        <img onclick="openHelp()" id="help" src="./core/img/help.png">
+                        <input placeholder="e.g. dd/mm/yyyy" type="text" id="date" onfocus="this.type='date'; this.setAttribute('onfocus','');this.blur();this.focus();" name="date" onblur="toggleTick(this, 'tick4');" onclick="this.placeholder='';"/><img src="./core/img/check.svg" class="tick" id="tick4" />
+                      </div>
+
+                      <div class="tab-content" id="tab2">
+                      </div>
+
+                      <div class="tab-content" id="tab3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <!-- Email Address -->
+                <div class="question">
+                    <label  class="large-label">Email Address</label>
+                    <img onclick="openHelp()" id="help" src="./core/img/help.png">
+                    <input type="text" name="email" placeholder="e.g. name@domain.com" onblur="toggleTick(this, 'tick8')" /><img src="./core/img/check.svg" class="tick" id="tick8" />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="question">
+                        <label  class="large-label">Phone Number</label>
+                        <img onclick="openHelp()" id="help" src="./core/img/help.png">
+                        <input type="number" pattern="[0-9]*" name="phone" autocomplete="tel" placeholder="e.g. 0200 000 0000" onblur="toggleTick(this, 'tick9')" /><img src="./core/img/check.svg" class="tick" id="tick9" />
+                </div>
+                <p>We will send you an email confirming our prices, and you can view your quote later by signing into your account using your email.</p>
+            </div>
+
+        </div>
+
+        <a style="margin-top: 60px;" onclick="redirectOrShowModalBasedOnSupplier()" class="button">See 18 Results</a>
+
+    </div>
+
+</body>
+
+</html>

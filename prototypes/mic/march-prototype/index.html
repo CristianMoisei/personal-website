@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<script src="scripts.js"></script>     
+
+<head>
+  <meta charset="utf-8">
+  <title>01. Make It Cheaper</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preload" href="img/01.jpg" as="image" type="image">
+<!-- 
+  <script>preloadImages(["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/sticky-footer-01.png", "img/sticky-footer-02.png", "img/sticky-footer-03.png",]);</script> -->
+</head>
+
+<body>
+
+  	<!-- <script type="text/javascript">
+        var images = new Array()
+        function preload() {
+          for (i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image()
+            images[i].src = preload.arguments[i]
+          }
+        }
+        preload(
+          "http://stage.hyperion.co/mic/march-prototype/img/01.jpg",
+          "http://stage.hyperion.co/mic/march-prototype/img/02.jpg",
+          "http://stage.hyperion.co/mic/march-prototype/img/03.jpg"
+        )
+    </script> -->
+  
+      <img id="landing-page" onclick="advanceLandingPage()" src="img/01.jpg">
+      <img id="sticky-footer" src="img/sticky-footer-01.png" onclick="advanceFooter()">
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/radios.js"></script>
+    <script>
+        var state = "monthly";
+    </script>
+</head>
+
+
+<body>
+
+    <div id="filters-header">
+        <div id="header" class="filters-header">
+            <img id="logo" src="img/logo.jpg">
+            <a href="tel:0200000000"><img id="phone" src="img/phone.jpg"></a>
+        </div>
+            <img class="sticky-header" style="margin-top: 58px;" src="img/filters/filters-header-02.jpg">
+    </div>
+    
+    <div style="margin-top: 150px;" class="content">
+
+            <img class="filters" style="margin-top: 60px;" src="img/filters/graph-03.jpg">
+
+            <img style="width: 50%;" class="filters" style="margin-top: 60px;" src="img/filters/suppliers-text.jpg">
+
+            <img id="monthy-yearly-toggle" src="img/monthly-prices.png" onclick="
+                if (state == 'monthly'){
+                        document.getElementById('monthy-yearly-toggle').src='img/yearly-prices.png';
+                        document.getElementById('suppliers-m').style.display='none';
+                        document.getElementById('suppliers-y').style.display='inline';
+                        document.getElementById('suppliers-m').src='img/filters/m-supplier-01.jpg'
+                        state = 'yearly';
+                } else if (state == 'yearly') {
+                        document.getElementById('monthy-yearly-toggle').src='img/monthly-prices.png';
+                        document.getElementById('suppliers-y').style.display='none';
+                        document.getElementById('suppliers-m').style.display='inline';
+                        document.getElementById('suppliers-y').src='img/filters/y-supplier-01.jpg'
+                        state = 'monthly';
+                };"
+            >
+
+            <img class="filters" id="suppliers-m" src="img/filters/m-supplier-01.jpg" usemap="#suppliers-m-map">
+
+            <map name="suppliers-m-map">
+                <area onclick="javascript:document.getElementById('suppliers-m').src='img/filters/m-supplier-02.jpg';
+                document.getElementById('cta').href='results.html';" coords="0,0,320,120" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-m').src='img/filters/m-supplier-03.jpg';
+                document.getElementById('cta').href='results-bristol.html';" coords="0,130,320,250" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-m').src='img/filters/m-supplier-04.jpg';
+                document.getElementById('cta').href='results-bigsix.html';" coords="0,270,320,380" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-m').src='img/filters/m-supplier-05.jpg';
+                document.getElementById('cta').href='results.html';" coords="0,400,320,510" shape="rect">
+            </map>
+
+            <img class="filters" id="suppliers-y" src="img/filters/y-supplier-01.jpg" usemap="#suppliers-y-map">
+
+            <map name="suppliers-y-map">
+                <area onclick="javascript:document.getElementById('suppliers-y').src='img/filters/y-supplier-02.jpg';
+                document.getElementById('cta').href='results.html';" coords="0,0,320,120" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-y').src='img/filters/y-supplier-03.jpg';
+                document.getElementById('cta').href='results-bristol.html';" coords="0,130,320,250" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-y').src='img/filters/y-supplier-04.jpg';
+                document.getElementById('cta').href='results-bigsix.html';" coords="0,270,320,380" shape="rect">
+                <area onclick="javascript:document.getElementById('suppliers-y').src='img/filters/y-supplier-05.jpg';
+                document.getElementById('cta').href='results.html';" coords="0,400,320,510" shape="rect">
+            </map>
+
+            <a id="cta" style="margin: 60px 0 10px 0;" href="results.html" class="button">Update Results</a>
+    
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<html>
+
+<script>
+
+    var scrolled = false;
+
+    document.addEventListener('scroll', function() {
+
+   if (window.pageYOffset >= 500) {
+       document.getElementById('footer').classList.add('footer-in');
+       document.getElementById('footer').classList.remove('footer-out');
+       scrolled = true;
+   }
+    if (window.pageYOffset <= 500 && scrolled == true){
+       document.getElementById('footer').classList.add('footer-out');
+       document.getElementById('footer').classList.remove('footer-in');
+       scrolled = false;
+   }
+
+   });
+
+</script>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        margin-bottom: 100px;
+    }
+
+    #container{
+        margin: 0 auto;
+        max-width: 420px;
+        width: 100%;
+    }
+
+    #main{
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    #gradient-left, #gradient-right{
+        width: 25px;
+        z-index: 2;
+        position: absolute;
+    }
+
+    #gradient-right{
+        right: 0;
+    }
+
+    #footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    .footer-in{
+        display: inline !important;
+        animation-name: footer-in;
+        animation-duration: 0.4s;
+    }
+
+    .footer-out{
+        display: inline !important;
+        animation-name: footer-out;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+    }
+
+    #logos{
+        height: 32px;
+        position: relative;
+        left: 0;
+        z-index: -2;
+        margin-left: 24px;
+        animation-name: logos;
+        animation-duration: 40s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+    }
+
+    .logos-container{
+        width: 100%;
+        overflow: hidden;
+        margin: 14px 0 40px 0;
+    }
+
+    @keyframes logos {
+    0% {left: 0}
+    50% {left: -420px;}
+    100% {left: 0}
+    }
+
+    @keyframes footer-in {
+    0% {bottom: -150px}
+    100% {bottom: 0;}
+    }
+
+    @keyframes footer-out {
+    0% {bottom: 0}
+    100% {bottom: -150px;}
+    }
+
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="container">
+        <a href="question-00.html"><img id="main" src="../core/img/01.jpg"></a>
+
+        <div class="logos-container">
+            <img id="gradient-left" src="../core/img/gradient-left.png">
+            <img id="gradient-right" src="../core/img/gradient-right.png">
+            <img id="logos" src="../core/img/02.jpg" >
+
+        </div>
+
+        <img id="main" src="../core/img/03.jpg">
+
+        <a href="question-00.html"><img id="footer" src="../core/img/footer.png"></a>
+    </div>
+
+
+</body>
+
+</html>

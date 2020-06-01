@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/yes-no.js"></script>
+
+    <script>
+            function openHelp(){
+                document.getElementById('help-overlay').style.display='inline';
+                document.getElementById('results-overlay').style.display='inline';
+            }
+    </script>
+
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <div id="header">
+        <img id="logo" src="img/logo.jpg" onclick="window.history.back();">
+        <img id="phone" src="img/phone.jpg" onclick="showPhoneModal()">
+    </div>
+
+    <img onclick="document.getElementById('help-overlay').style.display='none'; document.getElementById('results-overlay').style.display='none'" id="help-overlay" src="img/tooltip.png">
+    <img onclick="document.getElementById('overlay').style.display='none';" id="overlay" src="img/overlay.png">
+    <img onclick="document.getElementById('results-overlay').style.display='none'; document.getElementById('help-overlay').style.display='none';" id="results-overlay" src="img/overlay-02.png">
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="img/call-modal.png">
+    <img id="overlay-02" src="img/overlay-02.png">
+
+    <img id="switching-to" src="img/switching-to.jpg">
+
+    <div class="content">
+
+        <div class="section">
+                        
+            <!-- Email Address -->
+            <div class="question">
+                <label class="large-label">Confirm Email Address</label>
+                <img onclick="openHelp()" id="help" src="img/help.png">
+                <input id="businessName" type="text" name="business name" value="gemma@gmail.com" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+            </div>
+
+            <div class="question">
+                <label class="large-label">Password</label>
+                <img onclick="openHelp()" id="help" src="img/help.png">
+                <input id="businessName" type="text" name="business name" placeholder="Minimum 8 Characters" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+            </div>
+
+            <div class="question">
+                <label class="large-label">Verify Password</label>
+                <img onclick="openHelp()" id="help" src="img/help.png">
+                <input id="businessName" type="text" name="business name" placeholder="Minimum 8 Characters" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+            </div>
+
+            <p>Creating an account enables you to track the progress of your switch, see previous quotes and more.</p>
+
+        </div>
+
+        <a style="margin-top: 60px;" href="checkout-02.html" class="button">Next</a>
+    
+    </div>
+
+</body>
+
+</html>

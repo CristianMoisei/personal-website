@@ -1,0 +1,212 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/secure-delivery-sheet.css">
+        <link rel="stylesheet" type="text/css" href="styles/segmented-control.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="scripts/segmented-control.js"></script>
+        <script src="scripts/toggle-secure-delivery.js"></script>
+        <script src="scripts/add-image.js"></script>
+        <script src="scripts/edit-delivery-price.js"></script>
+        <script src="scripts/index-state.js"></script>
+        <script src="scripts/store-values.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+
+    <div id="secure-delivery-sheet-container">
+        <div id="secure-delivery-sheet">
+
+            <div id="header">
+                <img src="images/delivery.jpg">
+                <h3>Secure Delivery</h3>
+            </div>
+
+            <main>
+                <div class="ios13-segmented-control" id="segmented-control">
+                    <span class="selection" id="selection"></span>
+        
+                    <div class="option" id="tab-1">
+                        <input type="radio" id="first" name="sample" value="first" onclick="toggleSecureDelivery('true');" checked>
+                        <label id="label-1" for="first">Enabled</label>
+                    </div>
+        
+                    <div class="option" id="tab-2">
+                        <input type="radio" id="second" name="sample" value="second" onclick="toggleSecureDelivery('false');">
+                        <label id="label-2" for="second">Disabled</label>
+                    </div>
+        
+                </div>
+            </main>
+
+            <div class="usp" id="usp-1">
+                <img class="tick" src="images/tick.png">
+                <div class="content">
+                    <h3>No selling fees</h3>
+                    <p>Selling with Secure Delivery is completely free!</p>
+                </div>
+            </div>
+
+            <div class="usp" id="usp-2">
+                <img class="tick" id="tick-2" src="images/tick.png">
+                <div class="content">
+                    <h3>Better protection</h3>
+                    <p>You're covered by our payment guarantee, which means every sale is safe.</p>
+                </div>
+            </div>
+
+            <div class="usp" id="usp-3">
+                <img class="tick" id="tick-3" src="images/tick.png">
+                <div class="content">
+                    <h3>Reach millions more buyers</h3>
+                    <p>Nationwide delivery opens up your sales to millions more people, so you can sell more, faster.</p>
+                </div>
+            </div>
+
+            <div class="usp" id="usp-4">
+                <img class="tick" id="tick-4" src="images/tick.png">
+                <div class="content">
+                    <h3>Collection still possible</h3>
+                    <p>Buyers can still collect from you direct so you get the best of both worlds.</p>
+                </div>
+            </div>
+
+            <div id="delivery-sheet-tags">
+                <img src="images/enabled.jpg">
+                <img src="images/seller-protection.jpg">
+            </div>
+
+            <p id="cta" onclick="document.getElementById('secure-delivery-sheet-container').style.display= 'none'; location.reload();">Apply</p>
+    
+
+        </div>
+    </div>
+
+    <div class="component" id="media">
+        <p>Sell</p>
+        <div>
+            <img class="media-image" id="image-1" src="images/01.jpg">
+            <img class="media-image" id="image-2" src="images/02.jpg">
+            <img class="media-image" id="image-3" src="images/03.jpg">
+            <img class="media-image" id="image-4" src="images/image.jpg" onclick="addImage()">
+        </div>
+    </div>
+
+    <div class="component" id="description">
+        <div class="component-main-content">
+            <input id="title-input" oninput="storeTitle(this.value)" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this, titlePlaceholder)"></input>
+            <input id="description-input" oninput="storeDescription(this.value)" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this, descriptionPlaceholder)"></input>
+        </div>
+    </div>
+
+    <a href="categories/categories.html">
+        <div class="component" id="description">
+            <div class="component-main-content">
+                <div class="title">
+                    <img class="icon" src="images/category.jpg">
+                    <p id="select-category-text">Select Category</p>
+                </div>
+                <div class="component-sub-content">
+                </div>
+            </div>
+            <img class="icon arrow" src="images/arrow-down.jpg">
+        </div>
+    </a>
+
+    <div class="component" id="product-details">
+        <div class="title">
+            <img class="icon" src="images/details.jpg">
+            <p>Product Details</p>
+        </div>
+        <div class="component-sub-content">
+            <a href="sizes/sizes.html">
+                <div class="product-property" id="size">
+                    <p id="size-p">Size</p>
+                    <img class="icon arrow" src="images/arrow-right.png">
+                </div>
+            </a>
+            <a href="conditions/conditions.html">
+                <div class="product-property" id="condition">
+                    <p id="condition-p">Condition</p>
+                    <img class="icon arrow" src="images/arrow-right.png">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="component" id="secure-delivery" onclick="showSecureDeliverySheet()">
+        <div class="component-main-content">
+            <div class="title">
+                <img class="icon" src="images/delivery.jpg">
+                <p>Secure delivery</p>
+            <img class="icon arrow delivery-second-state" src="images/arrow-down.jpg">
+            </div>
+            <div class="component-sub-content">
+                <p id="delivery-first-state">Please select a category first</p>
+                <div id="delivery-second-state">
+                    <img id="delivery-state-tag" src="images/enabled.jpg">
+                    <img id="delivery-protection-tag" src="images/seller-protection.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="component" id="collection-still-possible">
+        <div class="component-main-content">
+            <div class="title">
+                <img class="icon" src="images/collection.png">
+                <p>Offer Collection</p>
+            </div>
+            <p class="component-sub-content">Buyers can still send you collection offers</p>
+        </div>
+    </div>
+
+    <div class="component" id="price">
+        <div class="component-main-content">
+            <div class="title">
+                <img class="icon" src="images/price.jpg">
+                <p>Price</p>
+            </div>
+
+            <div class="component-sub-content">
+                <input id="price-input" oninput="storePrice(this.value)" onfocus="hidePlaceholder(this); this.value='&pound;'" onblur="showPlaceholder(this, pricePlaceholder)"></input>
+                <div id="price-second-state">
+                    <div id="delivery-cost-title">
+                        <h4 id="title">+&pound;5 for delivery</h4>
+                        <h4 id="edit" onclick="showEditPrice()">Edit</h4>
+                    </div>
+                    <p id="price-second-state-paragraph">You can ship via any delivery service you want. The average cost of delivery in this category is &pound;5.00</p>
+                </div>
+                <div id="price-third-state">
+                    <input id="delivery-input" onfocus="hidePlaceholder(this); this.value='&pound;'" onblur="showPlaceholder(this, pricePlaceholder)"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="cta" onclick="
+        localStorage.removeItem('selectedCategory');
+        localStorage.removeItem('selectedCondition');
+        localStorage.removeItem('selectedSizeType');
+        localStorage.removeItem('deliveryEnabled');
+        localStorage.removeItem('selectedSize');
+
+        localStorage.removeItem('storedTitle');
+        localStorage.removeItem('storedDescription');
+        localStorage.removeItem('storedPrice');
+        
+        localStorage.removeItem('showSize');
+        localStorage.removeItem('showCondition');
+        localStorage.removeItem('imagesAdded');
+        location.reload();
+
+        alert('Your item has been listed successfully!');
+    ">Sell it</p>
+
+    <script src="scripts/index-placeholders.js"></script>
+    <script src="scripts/index-state.js"></script>
+    
+</html>

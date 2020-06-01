@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+</head>
+
+
+<body style="background-color: #F1F1F1">
+    <div id="header">
+        <img id="logo" src="img/logo.jpg" onclick="window.history.back();">
+        <img id="phone" src="img/phone.jpg" onclick="showPhoneModal()">
+    </div>
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="img/call-modal.png">
+    <img id="overlay-02" src="img/overlay-02.png">
+    
+    <img style="width: 100%;" src="img/account-01.png" usemap="#self">
+
+    <map name="self">
+        <area href="account-02.html" coords="10,144,360,205" shape="rect">
+    </map>
+
+</body>
+
+</html>

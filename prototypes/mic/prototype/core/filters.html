@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/ticks.js"></script>
+    <script>
+        var toggled = false;
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        function changeSelectedArea(imgSrc, suppliers) {
+          document.getElementById('suppliers').src = imgSrc;
+          document.getElementById('cta').href = 'loading.html?suppliers=' + suppliers + '&results=' + getUrlParameter('results');
+        };
+    </script>
+</head>
+
+
+<body>
+
+    <div class="content" style="border: 26px solid #666666; border-radius: 40px; box-shadow: 0px 0px 0px 30px #666666;">
+
+            <img class="filters" id="first-filter" style="margin-top: 30px;" src="img/filters/graph-01.jpg" onclick="
+            if (toggled == false){
+                document.getElementById('first-filter').src='img/filters/graph-02.jpg';
+                toggled = true;
+            } else {
+                document.getElementById('first-filter').src='img/filters/graph-01.jpg';
+                toggled = false;
+            }">
+
+            <ul class="toggles" style="margin-top: 16px;">
+                <li style="width:100%;">
+                    <label id="one" class="checked" onclick="tickClick(this, 'check-one')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-one" class="check_img" src="img/tick-checked.svg" width="24px" height="24px" />
+                        <div class="check_txt">12 Month</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;131/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no checked" id="two" onclick="tickClick(this, 'check-two')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-two" class="check_img" src="img/tick-checked.svg" width="24px" height="24px" />
+                        <div class="check_txt">24 Month</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;126/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no checked" id="three" onclick="tickClick(this, 'check-three')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-three" class="check_img" src="img/tick-checked.svg" width="24px" height="24px" />
+                        <div class="check_txt">36 Month</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;124/m</span>
+                    </label>
+                </li>
+            </ul>
+
+
+                    <img class="filters" style="margin-top: 30px;" src="img/filters/graph-03.jpg">
+
+                    <img class="filters" id="suppliers" src="img/filters/supplier-01.jpg" usemap="#suppliers-map">
+
+                    <map name="suppliers-map">
+                        <area onclick="changeSelectedArea('img/filters/supplier-01.jpg', 'all')" coords="0,0,270,70" shape="rect">
+                        <area onclick="changeSelectedArea('img/filters/supplier-02.jpg', 'bigsix')" coords="0,80,270,160" shape="rect">
+                        <area onclick="changeSelectedArea('img/filters/supplier-03.jpg', 'bristol')" coords="0,170,270,240" shape="rect">
+                    </map>
+
+            <a id="cta" style="margin-top: 30px;" href="loading.html" class="button">Update Results</a>
+            <a id="cta" style="opacity: 0.5; margin-top: 10px;" href="loading.html" class="button">Cancel</a>
+
+    </div>
+
+    <script>
+      document.getElementById('cta').href='loading.html?suppliers=all&results=' + getUrlParameter('results');
+    </script>
+</body>
+</html>

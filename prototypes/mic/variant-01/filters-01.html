@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/ticks.js"></script>
+</head>
+
+
+<body>
+    
+    <div class="content">
+
+            <img class="filters" style="margin-top: 30px;" src="img/filters/filters-01.jpg">
+
+            <ul class="toggles" style="margin-top: 16px;">
+                <li style="width:100%;">
+                    <label id="one" onclick="tickClick(this, 'check-one')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-one" class="check_img" src="img/tick-unchecked.svg" width="24px" height="24px" />
+                        <div class="check_txt">12 Month Contracts</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;131/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no" id="two" onclick="tickClick(this, 'check-two')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-two" class="check_img" src="img/tick-unchecked.svg" width="24px" height="24px" />
+                        <div class="check_txt">24 Month Contracts</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;126/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no" id="three" onclick="tickClick(this, 'check-three')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-three" class="check_img" src="img/tick-unchecked.svg" width="24px" height="24px" />
+                        <div class="check_txt">36 Month Contracts</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;124/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no" id="four" onclick="tickClick(this, 'check-four')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-four" class="check_img" src="img/tick-unchecked.svg" width="24px" height="24px" />
+                        <div class="check_txt">48 Month Contracts</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;121/m</span>
+                    </label>
+                </li>
+                <li style="width:100%;">
+                    <label class="no" id="five" onclick="tickClick(this, 'check-five')" for="nothing">
+                        <input type="radio" name="optradio">
+                        <img id="check-five" class="check_img" src="img/tick-unchecked.svg" width="24px" height="24px" />
+                        <div class="check_txt">60 Month Contracts</div>
+                        <span style="float: right !important; opacity: 0.5;">From &pound;120/m</span>
+                    </label>
+                </li>
+            </ul>
+
+            <a style="margin: 60px 0 10px 0;" href="filters-02.html" class="button">Next</a>
+    
+    </div>
+
+</body>
+
+</html>

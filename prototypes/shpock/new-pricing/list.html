@@ -1,0 +1,236 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <script>
+        var category = 0; 
+        var delivery = 0;
+        var help = 0;
+        var size = 1;
+        var secureDeliveryAvailable = false;
+        var secureDeliveryEnabled = true;
+
+        function toggleHelpSheet(state) {
+            if(state==true){
+                document.getElementById('help-container').style.display = 'inline';
+                window.scrollTo(0, 0);
+                document.body.classList.add('scroll-disabled');
+            } else {
+                document.getElementById('help-container').style.display = 'none'; 
+                document.body.classList.remove('scroll-disabled');
+                window.scrollTo(0, 500);
+            }
+        }
+
+
+        function toggleSecureDeliverySheet(state) {
+            if(state==true){
+                document.getElementById('secure-delivery-container').style.display = 'inline-block';
+                window.scrollTo(0, 0);
+                document.body.classList.add('scroll-disabled');
+            } else {
+                document.getElementById('secure-delivery-container').style.display = 'none'; 
+                document.body.classList.remove('scroll-disabled');
+                window.scrollTo(0, 500);
+            }
+        }
+
+        function showSize() {
+            if(help==0 || help==1){
+                document.getElementById('size').style.display = 'inline-block';
+            } else {
+                document.getElementById('size').style.display = 'none';
+            }
+        }
+
+        function determinePrices() {
+            if(help==0) {
+                switch(size) {
+                    case 0: document.getElementById('help-02').src = 'images/help-02a.png';
+                    break;
+                    case 1: document.getElementById('help-02').src = 'images/help-02b.png';
+                    break;
+                    case 2: document.getElementById('help-02').src = 'images/help-02c.png';
+                    break;
+                }
+
+            } else if(help==1) {
+                switch(size) {
+                    case 0: document.getElementById('help-02').src = 'images/help-02d.png';
+                    break;
+                    case 1: document.getElementById('help-02').src = 'images/help-02e.png';
+                    break;
+                    case 2: document.getElementById('help-02').src = 'images/help-02f.png';
+                    break;
+                }
+            }
+        }
+
+    </script>
+
+    <body>
+
+        <div id="main-container">
+
+            <div id="secure-delivery-container">
+
+                <div id="inner-container">
+
+                    <div id="close-help" onclick="toggleSecureDeliverySheet(false);"> </div>
+
+                    <img id="secure-delivery-image" src="images/secure-delivery-enabled.png" usemap="#secure-delivery-map">
+
+                    <map name="secure-delivery-map">
+                        <area onclick="
+                        // Enabled
+                            document.getElementById('listing-04').src = 'images/listing-04b.png';
+                            document.getElementById('secure-delivery-image').src = 'images/secure-delivery-enabled.png';
+                            document.getElementById('listing-07').style.display = 'inline';
+
+                            if(delivery == 1) {
+                                document.getElementById('listing-08').style.display = 'inline';
+                            }
+
+                            " coords="50,70,200,100" shape="rect">
+                        <area onclick="
+                        // Disabled
+                            document.getElementById('listing-04').src = 'images/listing-04c.png';
+                            document.getElementById('secure-delivery-image').src = 'images/secure-delivery-disabled.png';
+                            document.getElementById('listing-07').style.display = 'none';
+                            document.getElementById('listing-08').style.display = 'none';
+
+                            " coords="200,70,350,100" shape="rect">
+                        <area onclick="
+                        // Apply
+                            toggleSecureDeliverySheet(false)
+                            " coords="10,550,360,600" shape="rect">
+                        <area onclick="
+                        // Tooltip
+
+                            " coords="330,25,350,50" shape="rect">
+                    </map>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div id="help-container">
+                <div id="close-help" onclick="toggleHelpSheet(false);"> </div>
+
+                <div id="inner-container">
+                    <img id="help-01" src="images/help-01a.png" usemap="#image_map">
+
+                    <map name="image_map">
+                        <area onclick="
+                                document.getElementById('help-01').src = 'images/help-01a.png';
+                                help = 0;
+                                showSize();
+                                determinePrices();
+                            " coords="50,70,160,100" shape="rect">
+                        <area onclick="
+                                document.getElementById('help-01').src = 'images/help-01b.png';
+                                document.getElementById('help-02').src = 'images/help-02d.png';
+                                help = 1;
+                                showSize();
+                                determinePrices();
+                            " coords="160,70,250,100" shape="rect">
+                        <area onclick="
+                                document.getElementById('help-01').src = 'images/help-01c.png';
+                                document.getElementById('help-02').src = 'images/help-02g.png';
+                                help = 2;
+                                showSize();
+                                determinePrices();
+                            " coords="250,70,355,100" shape="rect">
+                    </map>
+
+                    <div id="size">
+                        <img id="size-01" src="images/size/size-01a.png" onclick="
+                                this.src = 'images/size/size-01b.png' 
+                                document.getElementById('size-02').src = 'images/size/size-02a.png';
+                                document.getElementById('size-03').src = 'images/size/size-03a.png';
+                                size = 0;
+                                determinePrices();
+                            ">
+                        <img id="size-02" src="images/size/size-02b.png" onclick="
+                                this.src = 'images/size/size-02b.png' 
+                                document.getElementById('size-01').src = 'images/size/size-01a.png';
+                                document.getElementById('size-03').src = 'images/size/size-03a.png';
+                                size = 1;
+                                determinePrices();
+                            ">
+                        <img id="size-03" src="images/size/size-03a.png" onclick="
+                                this.src = 'images/size/size-03b.png' 
+                                document.getElementById('size-01').src = 'images/size/size-01a.png';
+                                document.getElementById('size-02').src = 'images/size/size-02a.png';
+                                size = 2;
+                                determinePrices();
+                            ">
+                    </div>
+                    <img id="help-02" src="images/help-02b.png">
+
+                </div>
+            </div>
+
+            <img id="categories-container" src="images/category-01.png" onclick="
+                if (category==0){
+                    this.src = 'images/category-02.png';
+                    category = 1;
+                } else if (position==1){
+                    this.src = 'images/category-03.png';
+                    category = 2;
+                } else {
+                    document.getElementById('categories-container').style.display = 'none';
+                    document.getElementById('listing-03').src = 'images/listing-03b.png';
+                    document.getElementById('listing-04').src = 'images/listing-04b.png';
+                    document.getElementById('listing-05').style.display = 'inline';
+                    document.getElementById('listing-07').style.display = 'inline';
+                    document.getElementById('cta').style.display = 'inline';
+                    document.body.classList.remove('scroll-disabled');
+                    document.getElementById('main-container').style.height = 'auto';
+                    secureDeliveryAvailable = true;
+                }
+            ">
+
+            <img id="listing-01" src="images/listing-01a.png" onclick="this.src = 'images/listing-01b.png' ">
+            <img id="listing-02" src="images/listing-02a.png" onclick="this.src = 'images/listing-02b.png' ">
+            <img id="listing-03" src="images/listing-03a.png" onclick="
+                document.getElementById('categories-container').style.display = 'inline';
+                document.getElementById('cta').style.display = 'none';
+                position = 0;
+                window.scrollTo(0, 0);
+                document.body.classList.add('scroll-disabled');
+                document.getElementById('main-container').style.height = '100%';
+            ">
+            <img id="listing-04" src="images/listing-04a.png" onclick="
+                if (secureDeliveryAvailable) {
+                    toggleSecureDeliverySheet(true);
+                }
+            ">
+            <img id="listing-05" src="images/listing-05.png">
+            <img id="listing-06" src="images/listing-06a.png" onclick="this.src = 'images/listing-06b.png' ">
+            <img id="listing-07" src="images/listing-07a.png" onclick="
+                if (delivery==0){
+                    this.src = 'images/listing-07b.png';
+                    delivery = 1;
+                    document.getElementById('listing-08').style.display = 'inline';
+                } else {
+                    this.src = 'images/listing-07c.png';
+                }
+            ">
+            <img id="listing-08" src="images/listing-08.png" onclick="toggleHelpSheet(true)">
+            <img id="cta" src="images/listing-cta.png">
+        </div>
+
+        <div id="home-bar"></div>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/yes-no.js"></script>
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+    
+</head>
+
+
+<body>
+    <div id="header">
+        <img id="logo" src="img/logo.jpg" onclick="window.history.back();">
+        <img id="phone" src="img/phone.jpg" onclick="showPhoneModal()">
+    </div>
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="img/call-modal.png">
+    <img id="overlay-02" src="img/overlay-02.png">
+
+    <img id="switching-to" src="img/switching-to-compact.png">
+
+    <div class="content">
+
+        <a style="margin-top: 40px; font-size: 17px; background-color: #fff; border: 1px solid black; color: black;" href="img/sample-contract.pdf" class="button" target="_blank">View Contract (PDF)</a>
+        <a style="margin-top: 20px; font-size: 17px; background-color: #fff; border: 1px solid black; color: black;" href="img/sample-contract.pdf" class="button" target="_blank">View Do It For You Agreement (PDF)</a>
+
+        <img id="signature" style="margin-top: 40px;" src="img/signed-off.jpg" onclick="document.getElementById('signature').src='img/signed-on.jpg'">
+
+        <a style="margin-top: 60px;" href="end.html" class="button">Finish & Switch</a>
+    
+    </div>
+
+</body>
+
+</html>

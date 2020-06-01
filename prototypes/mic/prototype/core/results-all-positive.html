@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+        var state = "monthly";
+    </script>
+
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+
+    <script>
+        function openOverlay() {
+            document.getElementById('results-overlay').style.display='inline';
+            document.getElementById('modal-01').style.display='inline';
+        }
+        setTimeout(openOverlay, 50000);
+    </script>
+
+</head>
+
+<body id="results">
+
+    <img id="modal-01" src="../core/img/modal-01.png" usemap="#modal-01-map">
+    <img id="modal-02" src="../core/img/modal-02.png" usemap="#modal-02-map">
+    <img id="modal-03" src="../core/img/modal-03.png" usemap="#modal-03-map">
+    <img id="modal-04" src="../core/img/modal-04.png" onclick="
+        document.getElementById('modal-01').style.display='none';
+        document.getElementById('modal-04').style.display='none';
+        document.getElementById('results-overlay').style.display='none';
+    ">
+
+    <map name="modal-01-map">
+        <area href="filters.html?results=positive" coords="25,140,330,200" shape="rect">
+        <area onclick="
+            document.getElementById('modal-01').style.display='none';
+            document.getElementById('modal-02').style.display='inline';" coords="25,210,330,270" shape="rect">
+        <area onclick="
+            document.getElementById('modal-01').style.display='none';
+            document.getElementById('results-overlay').style.display='none';" coords="300,0,350,50" shape="rect">
+    </map>
+
+
+    <map name="modal-02-map">
+        <area onclick="
+            document.getElementById('modal-02').style.display='none';
+            document.getElementById('results-overlay').style.display='none';" coords="300,0,350,50" shape="rect">
+        <area onclick="
+            document.getElementById('modal-02').style.display='none';
+            document.getElementById('modal-03').style.display='inline';
+            document.getElementById('tariffs-container').style.display='none';" coords="20,340,330,400" shape="rect">
+        <area onclick="
+        showPhoneModal();
+        document.getElementById('modal-02').style.display='none';
+        document.getElementById('results-overlay').style.display='none';
+        " coords="25,280,330,330" shape="rect">
+    </map>
+
+    <map name="modal-03-map">
+        <area onclick="document.getElementById('tariffs-container').style.display='inline';
+        document.getElementById('modal-03').style.display='none';
+        document.getElementById('modal-04').style.display='inline';" coords="25,600,330,670" shape="rect">
+        <area onclick="
+            document.getElementById('modal-03').style.display='none';
+            document.getElementById('modal-02').style.display='inline';
+            document.getElementById('tariffs-container').style.display='inline';" coords="25,680,330,730" shape="rect">
+    </map>
+
+    <img onclick="
+        document.getElementById('results-overlay').style.display='none';
+        document.getElementById('modal-01').style.display='none';
+        document.getElementById('modal-02').style.display='none';
+        document.getElementById('modal-03').style.display='none';
+        document.getElementById('modal-04').style.display='none';
+        document.getElementById('tariffs-container').style.display='block';
+    " id="results-overlay" src="../core/img/overlay-02.png">
+
+
+    <div id="header">
+        <img id="logo" src="img/logo.jpg" onclick="window.history.back();">
+        <a href="results-all-negative.html"><img id="phone" src="img/phone.jpg"></a>
+    </div>
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="img/call-modal.png">
+    <img id="overlay-02" src="img/overlay-02.png">
+
+    <div class="content">
+
+        <img style="margin-top: 20px; box-shadow: none;" class="tariff" src="img/positive-intercept-card.png">
+        <div>
+            <div id="results-header">
+                <h3 onclick="openOverlay();">16 Quotes</h3>
+                <a href="filters.html?results=positive"> <p>Filters</p></a>
+                <p id="monthy-yearly-toggle"onclick="
+                if (state == 'monthly'){
+                        document.getElementById('monthy-yearly-toggle').innerHTML='Show Monthly Prices';
+                        document.getElementById('tariff-01').src='img/tariffs/compare/yearly/tariff-01.png';
+                        document.getElementById('tariff-02').src='img/tariffs/compare/yearly/tariff-02.png';
+                        document.getElementById('tariff-03').src='img/tariffs/compare/yearly/tariff-03.png';
+                        document.getElementById('tariff-04').src='img/tariffs/compare/yearly/tariff-04.png';
+                        document.getElementById('tariff-05').src='img/tariffs/compare/yearly/tariff-05.png';
+                        document.getElementById('tariff-06').src='img/tariffs/compare/yearly/tariff-06.png';
+                        document.getElementById('tariff-07').src='img/tariffs/compare/yearly/tariff-07.png';
+                        document.getElementById('tariff-08').src='img/tariffs/compare/yearly/tariff-08.png';
+                        document.getElementById('tariff-09').src='img/tariffs/compare/yearly/tariff-09.png';
+                        document.getElementById('tariff-10').src='img/tariffs/compare/yearly/tariff-10.png';
+                        document.getElementById('tariff-11').src='img/tariffs/compare/yearly/tariff-11.png';
+                        document.getElementById('tariff-12').src='img/tariffs/compare/yearly/tariff-12.png';
+                        document.getElementById('tariff-13').src='img/tariffs/compare/yearly/tariff-13.png';
+                        document.getElementById('tariff-14').src='img/tariffs/compare/yearly/tariff-14.png';
+                        document.getElementById('tariff-15').src='img/tariffs/compare/yearly/tariff-15.png';
+                        document.getElementById('tariff-16').src='img/tariffs/compare/yearly/tariff-16.png';
+                        state = 'yearly';
+                } else if (state == 'yearly') {
+                        document.getElementById('monthy-yearly-toggle').innerHTML='Show Yearly Prices';
+                        document.getElementById('tariff-01').src='img/tariffs/compare/monthly/tariff-01.png';
+                        document.getElementById('tariff-02').src='img/tariffs/compare/monthly/tariff-02.png';
+                        document.getElementById('tariff-03').src='img/tariffs/compare/monthly/tariff-03.png';
+                        document.getElementById('tariff-04').src='img/tariffs/compare/monthly/tariff-04.png';
+                        document.getElementById('tariff-05').src='img/tariffs/compare/monthly/tariff-05.png';
+                        document.getElementById('tariff-06').src='img/tariffs/compare/monthly/tariff-06.png';
+                        document.getElementById('tariff-07').src='img/tariffs/compare/monthly/tariff-07.png';
+                        document.getElementById('tariff-08').src='img/tariffs/compare/monthly/tariff-08.png';
+                        document.getElementById('tariff-09').src='img/tariffs/compare/monthly/tariff-09.png';
+                        document.getElementById('tariff-10').src='img/tariffs/compare/monthly/tariff-10.png';
+                        document.getElementById('tariff-11').src='img/tariffs/compare/monthly/tariff-11.png';
+                        document.getElementById('tariff-12').src='img/tariffs/compare/monthly/tariff-12.png';
+                        document.getElementById('tariff-13').src='img/tariffs/compare/monthly/tariff-13.png';
+                        document.getElementById('tariff-14').src='img/tariffs/compare/monthly/tariff-14.png';
+                        document.getElementById('tariff-15').src='img/tariffs/compare/monthly/tariff-15.png';
+                        document.getElementById('tariff-16').src='img/tariffs/compare/monthly/tariff-16.png';
+                        state = 'monthly';
+                };">Show Yearly Prices</p>
+            </div>
+
+        </div>
+
+        <div id="tariffs-container">
+            <a href="tariff-details/01.html"><img class="tariff" id="tariff-01" src="img/tariffs/compare/monthly/tariff-01.png"></a>
+            <a href="tariff-details/02.html"><img class="tariff" id="tariff-02" src="img/tariffs/compare/monthly/tariff-02.png"></a>
+            <a href="tariff-details/03.html"><img class="tariff" id="tariff-03" src="img/tariffs/compare/monthly/tariff-03.png"></a>
+            <a href="tariff-details/04.html"><img class="tariff" id="tariff-04" src="img/tariffs/compare/monthly/tariff-04.png"></a>
+            <a href="tariff-details/05.html"><img class="tariff" id="tariff-05" src="img/tariffs/compare/monthly/tariff-05.png"></a>
+            <a href="tariff-details/06.html"><img class="tariff" id="tariff-06" src="img/tariffs/compare/monthly/tariff-06.png"></a>
+            <a href="tariff-details/07.html"><img class="tariff" id="tariff-07" src="img/tariffs/compare/monthly/tariff-07.png"></a>
+            <a href="tariff-details/08.html"><img class="tariff" id="tariff-08" src="img/tariffs/compare/monthly/tariff-08.png"></a>
+            <img style="margin: 20px auto" class="tariff" src="img/tariffs/insurance.png">
+            <a href="tariff-details/09.html"><img class="tariff" id="tariff-09" src="img/tariffs/compare/monthly/tariff-09.png"></a>
+            <a href="tariff-details/10.html"><img class="tariff" id="tariff-10" src="img/tariffs/compare/monthly/tariff-10.png"></a>
+            <a href="tariff-details/11.html"><img class="tariff" id="tariff-11" src="img/tariffs/compare/monthly/tariff-11.png"></a>
+            <a href="tariff-details/12.html"><img class="tariff" id="tariff-12" src="img/tariffs/compare/monthly/tariff-12.png"></a>
+            <a href="tariff-details/13.html"><img class="tariff" id="tariff-13" src="img/tariffs/compare/monthly/tariff-13.png"></a>
+            <a href="tariff-details/14.html"><img class="tariff" id="tariff-14" src="img/tariffs/compare/monthly/tariff-14.png"></a>
+            <a href="tariff-details/15.html"><img class="tariff" id="tariff-15" src="img/tariffs/compare/monthly/tariff-15.png"></a>
+            <a href="tariff-details/16.html"><img class="tariff" id="tariff-16" src="img/tariffs/compare/monthly/tariff-16.png"></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

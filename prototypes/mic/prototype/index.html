@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <script>
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                window.location = "landing.html";
+            }
+        </script>
+    </head>
+
+    <style>
+    
+    ::-webkit-scrollbar {width: 0 !important;}
+    ::-webkit-scrollbar { display: none !important;}
+
+    body{
+        background-color: #A5ACB2;
+        margin: 0;
+        padding: 0;
+        position:relative;
+        overflow-x:hidden;
+    }
+    
+    #iphone{
+        width: 744px;
+        margin: 0 auto;
+        display: block;
+        z-index: -1;
+        pointer-events:none;
+    }
+
+    embed{
+        z-index: 1;
+        position: absolute;
+        width: 375px;
+        height: 750px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 153px;
+        background-color: #fff;
+        border: none;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+    }
+
+    #top-bar{
+        z-index: 1;
+        position: absolute;
+        width: 375px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 89px;
+        background-color: #fff;
+        border: none;
+        -webkit-border-top-left-radius: 40px;
+        -webkit-border-top-right-radius: 40px;
+        -moz-border-radius-topleft: 40px;
+        -moz-border-radius-topright: 40px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    #footer{
+        border-bottom-right-radius: 40px !important;
+        border-bottom-left-radius: 40px !important;
+    }
+
+    div{
+    width: 375px;
+    height: 904px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+	border-radius: 40px;
+	overflow:hidden;
+	position:absolute;
+    }
+
+    p{
+        font-family: 'Cabin', sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0.4;
+        font-size: 18px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        html {
+            transform: scale(0.8);
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        html {
+            transform: scale(0.6);
+        }
+    }
+
+    </style>
+    <body>
+        <div>
+            <img id="top-bar" src="core/img/top-bar.jpg">
+            <embed src="landing.html"></embed>
+        </div>
+        <img id="iphone" src="core/img/iphone.png">
+    </body>
+</html>

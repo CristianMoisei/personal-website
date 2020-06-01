@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="loading.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+
+
+<script>
+
+setTimeout(function(){
+     advance('row-1', 'row-2');
+}, 2000);
+
+setTimeout(function(){
+  advance('row-2', 'row-3');
+}, 5000);
+
+setTimeout(function(){
+  advance('row-3', 'row-4');
+}, 7500);
+
+setTimeout(function(){
+  advance('row-4');
+}, 9000);
+
+setTimeout(function(){
+  merge()
+}, 10000);
+
+</script>
+
+<body>
+
+
+     <div id="main-container">
+          <div class="inner"> <!-- Used to vertically a lign the container -->
+
+               <div id="header">
+                    <h1 id="searching">Let’s match you with one of our energy experts…</h1>
+               </div>
+
+              <div id="end">
+                <img src="light-tick.png">
+                <h1>Your details have been successfully shared with our energy experts</h1>
+              </div>
+
+               <ul id="placeholders">
+
+
+                  <li class="row loading" id="row-1">
+
+                      <div class="icon">
+                        <div class="loading-spinner"></div>
+                        <div class="tick-icon"></div>
+                        <div class="placeholder-icon"></div>
+                      </div>
+
+                      <div class="text">
+                        <div class="placeholder-text" id="placeholder-1"></div>
+                        <div class="row-text">Searching through 200 available experts to find the best match for you</div>
+                      </div>
+
+                    </li>
+
+                    <li class="row placeholder" id="row-2">
+
+                         <div class="icon">
+                              <div class="loading-spinner"></div>
+                              <div class="tick-icon"></div>
+                              <div class="placeholder-icon"></div>
+                         </div>
+
+                         <div class="text">
+                              <div class="placeholder-text" id="placeholder-2"></div>
+                              <div class="row-text">32 of our experts specialise in energy for small businesses</div>
+                         </div>
+
+                    </li>
+
+                    <li class="row placeholder" id="row-3">
+
+                         <div class="icon">
+                              <div class="loading-spinner"></div>
+                              <div class="tick-icon"></div>
+                              <div class="placeholder-icon"></div>
+                         </div>
+
+                         <div class="text">
+                              <div class="placeholder-text" id="placeholder-3"></div>
+                              <div class="row-text">You’ve been succesfully matched with an energy team </div>
+                         </div>
+
+                    </li>
+
+                    <li class="row placeholder" id="row-4">
+
+                         <div class="icon">
+                              <div class="loading-spinner"></div>
+                              <div class="tick-icon"></div>
+                              <div class="placeholder-icon"></div>
+                         </div>
+
+                         <div class="text">
+                              <div class="placeholder-text" id="placeholder-4"></div>
+                              <div class="row-text">Your details are being securely shared with them now</div>
+                         </div>
+
+                    </li>
+
+               </ul>
+
+          </div>
+
+     </div>
+</div>
+
+
+
+</body>
+
+
+
+</html>

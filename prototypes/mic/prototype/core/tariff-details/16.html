@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+        function showPhoneModal(){
+            document.getElementById('call-modal').style.display='inline';
+            document.getElementById('overlay-02').style.display='inline';
+        }
+    </script>
+</head>
+
+
+<body>
+
+        <img id="modal-01" src="../img/modal-01.png" usemap="#modal-01-map">
+        <img id="modal-02" src="../img/modal-02.png" usemap="#modal-02-map">
+        <img id="modal-03" src="../img/modal-03.png" usemap="#modal-03-map">
+        <img id="modal-04" src="../img/modal-04.png" onclick="
+            document.getElementById('modal-01').style.display='none'; 
+            document.getElementById('modal-04').style.display='none';
+            document.getElementById('results-overlay').style.display='none';
+        ">
+    
+        <map name="modal-02-map">
+            <area onclick="
+                document.getElementById('modal-02').style.display='none';
+                document.getElementById('results-overlay').style.display='none';" coords="300,0,350,50" shape="rect">
+            <area onclick="
+                document.getElementById('modal-02').style.display='none';
+                document.getElementById('modal-03').style.display='inline';
+                document.getElementById('tariff-details').style.display='none';" coords="20,340,330,400" shape="rect">
+            <area onclick="
+            showPhoneModal();
+            document.getElementById('modal-02').style.display='none';
+            document.getElementById('results-overlay').style.display='none';
+            " coords="25,280,330,330" shape="rect">
+        </map>
+    
+        <map name="modal-03-map">
+            <area onclick="document.getElementById('tariff-details').style.display='inline';
+            document.getElementById('modal-03').style.display='none';
+            document.getElementById('modal-04').style.display='inline';" coords="25,600,330,670" shape="rect">
+            <area onclick="
+                document.getElementById('modal-03').style.display='none';
+                document.getElementById('modal-02').style.display='inline';
+                document.getElementById('tariff-details').style.display='inline';" coords="25,680,330,730" shape="rect">
+        </map>
+    
+        <img onclick="
+            document.getElementById('results-overlay').style.display='none';
+            document.getElementById('modal-01').style.display='none';
+            document.getElementById('modal-02').style.display='none';
+            document.getElementById('modal-03').style.display='none';
+            document.getElementById('modal-04').style.display='none';
+            document.getElementById('tariff-details').style.display='block';
+        " id="results-overlay" src="../img/overlay-02.png">
+
+        <img id="modal-05" src="../img/more-info.png" onclick="document.getElementById('modal-05').style.display='none'">
+
+    <div id="header">
+        <img id="logo" src="../img/logo.jpg" onclick="window.history.back();">
+        <img id="phone" src="../img/phone.jpg" onclick="showPhoneModal()">
+    </div>
+
+    <img id="call-modal" onclick="document.getElementById('call-modal').style.display='none'; document.getElementById('overlay-02').style.display='none';" src="../img/call-modal.png">
+    <img id="overlay-02" src="../img/overlay-02.png">
+    
+    <div id="tariff-details">
+        <img src="../tariff-details/images/16.jpg" usemap="#tariff-map-01">
+
+        <map name="tariff-map-01">
+                <area onclick="window.history.back();" coords="10,13,84,47" shape="rect">
+                <area href="../checkout-01.html" coords="30,250,340,300" shape="rect">
+                <area onclick="
+                    document.getElementById('results-overlay').style.display='inline';
+                    document.getElementById('modal-02').style.display='inline';
+                " coords="30,310,340,360" shape="rect">
+                <area onclick="document.getElementById('modal-05').style.display='inline'" coords="100,375,270,410" shape="rect">
+            </map>
+
+            <img style="margin-top: 10px;" src="../img/tariff-details-02.jpg" usemap="#tariff-map-02">
+
+        <map name="tariff-map-02">
+            <area href="../checkout-01.html" coords="30,820,340,880" shape="rect">
+        </map>
+        <a href="../save-quote-01.html"><img style="margin-top: 24px;" src="../img/tariff-details-03.jpg"></a>
+    </div>
+    
+</body>
+
+</html>

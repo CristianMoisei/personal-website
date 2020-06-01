@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/yes-no.js"></script>
+</head>
+
+
+<body>
+    <div id="header">
+        <img id="logo" src="img/logo.jpg">
+        <a href="tel:0200000000"><img id="phone" src="img/phone.jpg"></a>
+    </div>
+
+    <img id="switching-to" src="img/switching-to.jpg">
+
+    <div class="content">
+
+            <div class="section">
+                        
+                    <!-- Full Name -->
+                    <div class="question">
+                        <label class="large-label">Full Name</label>
+                        <img id="help" src="img/help.png">
+                        <input id="businessName" type="text" name="business name" placeholder="e.g. John Smith" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Job TItle -->
+                    <div class="question">
+                            <label class="large-label">Job Title</label>
+                            <img id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. Director" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Correspondence Address -->
+                    <div class="question">
+                            <label class="large-label">Correspondence Address</label>
+                            <img id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. 112 Mincing Lane" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Company Registration Number -->
+                    <div class="question">
+                        <label class="large-label">Company Registration Number</label>
+                        <img id="help" src="img/help.png">
+                        <input id="businessName" type="text" name="business name" placeholder="e.g. 39232222" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Business Name -->
+                    <div class="question">
+                        <label class="large-label">Business Name</label>
+                        <img id="help" src="img/help.png">
+                        <input id="businessName" type="text" name="business name" placeholder="e.g. Acme Inc." onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+            </div>
+
+
+            <div class="section">
+                        
+                    <!-- Account Holder Name -->
+                    <div class="question">
+                        <label class="large-label">Account Holder Name</label>
+                        <img id="help" src="img/help.png">
+                        <input id="businessName" type="text" name="business name" placeholder="e.g. John Smith" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Account Number TItle -->
+                    <div class="question">
+                            <label class="large-label">Account Number</label>
+                            <img id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. 00000000" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+                    <!-- Sort Code -->
+                    <div class="question">
+                            <label class="large-label">Sort Code</label>
+                            <img id="help" src="img/help.png">
+                            <input id="businessName" type="text" name="business name" placeholder="e.g. 00-00-00" onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    </div>
+
+            </div>
+
+        <!-- Industry Data Section -->
+        <div>
+            <div class="section" id="dify">
+                <h3 style="margin-bottom:10px;">Would you like us to handle your renewal process in the future?</h3>
+                <p id="extra-padding">With our exclusive <strong>Do It For You service</strong>, every time your contract is up for renewal, we can search through all our prices to find the right package.</p>
+                <img id="learn-more" src="img/learn-more.jpg">
+                    <ul class="toggles">
+                        <li>
+                            <label class="yes" id="yesLabel1" onclick="radioClick(this, 'noLabel1', 'yesButton1', 'noButton1')">
+                                <input type="radio" name="optradio">
+                                <img id="yesButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">Yes</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="no" id="noLabel1" onclick="radioClick(this, 'yesLabel1', 'noButton1', 'yesButton1');">
+                                <input type="radio" name="optradio">
+                                <img id="noButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">No</div>
+                            </label>
+                        </li>
+                    </ul>
+            </div>
+
+        </div>
+
+        <a id="review" style="margin-top: 30px;" href="checkout-02.html" class="button">Review Contract</a>
+    
+    </div>
+
+</body>
+
+</html>

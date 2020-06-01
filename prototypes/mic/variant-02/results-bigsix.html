@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/old-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+        var state = "monthly";
+    </script>
+</head>
+
+
+<body id="results">
+    <div id="header">
+        <a href="../index.html"><img id="menu" src="img/menu.jpg"></a>
+        <img id="logo" src="img/logo.jpg">
+        <a href="tel:0200000000"><img id="phone" src="img/phone.jpg"></a>
+    </div>
+    
+    <div class="content">
+
+        <div>
+            <div id="results-header">
+                <h3>11 Results</h3>
+                <p>Based on 3 Filters</p>
+            </div>
+
+            <img id="monthy-yearly-toggle" src="img/monthly-prices.png"
+            onclick="
+                if (state == 'monthly'){
+                        document.getElementById('monthy-yearly-toggle').src='img/yearly-prices.png';
+                        document.getElementById('tariff-01').src='img/tariffs/yearly/tariff-01.png';
+                        document.getElementById('tariff-02').src='img/tariffs/yearly/tariff-02.png';
+                        document.getElementById('tariff-04').src='img/tariffs/yearly/tariff-04.png';
+                        document.getElementById('tariff-05').src='img/tariffs/yearly/tariff-05.png';
+                        document.getElementById('tariff-06').src='img/tariffs/yearly/tariff-06.png';
+                        document.getElementById('tariff-07').src='img/tariffs/yearly/tariff-07.png';
+                        document.getElementById('tariff-11').src='img/tariffs/yearly/tariff-11.png';
+                        document.getElementById('tariff-12').src='img/tariffs/yearly/tariff-12.png';
+                        document.getElementById('tariff-14').src='img/tariffs/yearly/tariff-14.png';
+                        document.getElementById('tariff-15').src='img/tariffs/yearly/tariff-15.png';
+                        document.getElementById('tariff-16').src='img/tariffs/yearly/tariff-16.png';
+                        state = 'yearly';
+                } else if (state == 'yearly') {
+                        document.getElementById('monthy-yearly-toggle').src='img/monthly-prices.png';
+                        document.getElementById('tariff-01').src='img/tariffs/monthly/tariff-01.png';
+                        document.getElementById('tariff-02').src='img/tariffs/monthly/tariff-02.png';
+                        document.getElementById('tariff-04').src='img/tariffs/monthly/tariff-04.png';
+                        document.getElementById('tariff-05').src='img/tariffs/monthly/tariff-05.png';
+                        document.getElementById('tariff-06').src='img/tariffs/monthly/tariff-06.png';
+                        document.getElementById('tariff-07').src='img/tariffs/monthly/tariff-07.png';
+                        document.getElementById('tariff-11').src='img/tariffs/monthly/tariff-11.png';
+                        document.getElementById('tariff-12').src='img/tariffs/monthly/tariff-12.png';
+                        document.getElementById('tariff-14').src='img/tariffs/monthly/tariff-14.png';
+                        document.getElementById('tariff-15').src='img/tariffs/monthly/tariff-15.png';
+                        document.getElementById('tariff-16').src='img/tariffs/monthly/tariff-16.png';
+                        state = 'monthly';
+                };"
+            >
+        </div>
+
+
+        <div id="tariffs-container">
+            <a href="tariff-details/01.html"><img class="tariff" id="tariff-01" src="img/tariffs/monthly/tariff-01.png"></a>
+            <a href="tariff-details/02.html"><img class="tariff" id="tariff-02" src="img/tariffs/monthly/tariff-02.png"></a>
+            <a href="tariff-details/04.html"><img class="tariff" id="tariff-04" src="img/tariffs/monthly/tariff-04.png"></a>
+            <a href="tariff-details/05.html"><img class="tariff" id="tariff-05" src="img/tariffs/monthly/tariff-05.png"></a>
+            <a href="tariff-details/06.html"><img class="tariff" id="tariff-06" src="img/tariffs/monthly/tariff-06.png"></a>
+            <a href="tariff-details/07.html"><img class="tariff" id="tariff-07" src="img/tariffs/monthly/tariff-07.png"></a>
+            <img style="margin: 20px auto" class="tariff" src="img/tariffs/dify.png">
+            <a href="tariff-details/11.html"><img class="tariff" id="tariff-11" src="img/tariffs/monthly/tariff-11.png"></a>
+            <a href="tariff-details/12.html"><img class="tariff" id="tariff-12" src="img/tariffs/monthly/tariff-12.png"></a>
+            <a href="tariff-details/14.html"><img class="tariff" id="tariff-14" src="img/tariffs/monthly/tariff-14.png"></a>
+            <a href="tariff-details/15.html"><img class="tariff" id="tariff-15" src="img/tariffs/monthly/tariff-15.png"></a>
+            <a href="tariff-details/16.html"><img class="tariff" id="tariff-16" src="img/tariffs/monthly/tariff-16.png"></a>
+        </div>
+
+        <div class="sticky-footer">
+                <a href="filters-01.html" class="button" id="help-me-choose">Help me Choose</a>
+        </div>
+    
+    </div>
+
+</body>
+
+</html>

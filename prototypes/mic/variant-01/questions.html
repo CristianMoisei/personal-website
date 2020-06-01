@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="js/yes-no.js"></script>
+</head>
+
+
+<body>
+    <div id="header">
+        <a href="index.html"><img id="menu" src="img/menu.jpg"></a>
+        <img id="logo" src="img/logo.jpg">
+        <a href="tel:0200000000"><img id="phone" src="img/phone.jpg"></a>
+    </div>
+
+    <img onclick="document.getElementById('overlay').style.display='none';" id="overlay" src="img/overlay.png">
+
+
+    <div class="content">
+
+        <!-- Postcode and Address -->
+        <div class="question">
+            <label class="large-label">Postcode and Address</label><br />
+            <input type="text" name="postcode" placeholder="e.g E14 0LU" onblur="fillBusinessName(this, 'tick1')" /><img src="img/check.svg" class="tick" id="tick1" />
+            <input type="text" name="address" placeholder="Address (Type Postcode First)" onblur="toggleTick(this, 'tick1pt2')" /><img src="img/check.svg" class="tick" id="tick1pt2" />
+        </div>
+
+
+        <!-- Industry Data Section -->
+        <div>
+            <div class="section">
+                <h3 style="margin-bottom:10px;">Would you like us to retrieve your MPAN number and consumption data?</h3>
+                <p id="extra-padding">We will search industry held data to retrieve details like your MPAN number, estimated consumtpion and your supplier.</p>
+                    <ul class="toggles">
+                        <li>
+                            <label class="yes" id="yesLabel1" onclick="radioClick(this, 'noLabel1', 'yesButton1', 'noButton1')">
+                                <input type="radio" name="optradio">
+                                <img id="yesButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">Yes</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="no" id="noLabel1" onclick="radioClick(this, 'yesLabel1', 'noButton1', 'yesButton1')">
+                                <input type="radio" name="optradio">
+                                <img id="noButton1" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">No</div>
+                            </label>
+                        </li>
+                    </ul>
+                    <label for="mpan" class="large-label">MPAN</label>
+                    <input type="text" placeholder="e.g. MP 98237492673495" id="mpan" name="mpan" onblur="toggleTick(this, 'tick2')" /><img style="top: -80px;" src="img/check.svg" class="tick" id="tick2" />
+                    <div class="autofilled" id="autofilled1"><strong>Autofilled with industry data</strong></div>
+                    <label for="consumption" class="large-label">Consumption</label>
+                    <input type="number" placeholder="20000" id="consumption" name="consumption" onblur="toggleTick(this, 'tick3')" /><img style="top: -80px;" src="img/check.svg" class="tick" id="tick3" />
+                    <div class="autofilled" id="autofilled2"><strong>Autofilled with industry data</strong></div>
+                    <label for="provider" class="large-label">Supplier</label>
+                    <select placeholder="Select Supplier" id="provider" name="provider" class="energy-select custom-select custom-select-lg">
+                        <option value="Please Select" id="scotpow">Please Select</option>
+                        <option value="Scottish Power" id="scotpow">Scottish Power</option>
+                        <option value="Bulb">Bulb</option>
+                        <option value="Octopus">Octopus</option>
+                    </select>
+                    <div class="standalone-industry" id="autofilled3"><strong>Autofilled with industry data</strong></div>
+            </div>
+
+            <div class="section">
+                <!-- Contract Expiration Date -->
+                <div class="question">
+                    <label class="large-label">Contract Expiration Date</label>
+                    <input placeholder="e.g. January 2014" type="text" id="date" onfocus="this.type='date'; this.setAttribute('onfocus','');this.blur();this.focus();" name="date" onblur="toggleTick(this, 'tick4');" onclick="this.placeholder='';"/><img src="img/check.svg" class="tick" id="tick4" />
+                </div>
+                
+
+                <!-- Business Name -->
+                <div class="question">
+                    <label class="large-label">Business Name</label>
+                    <input id="businessName" type="text" name="business name" placeholder="e.g. Acme Inc." onblur="toggleTick(this, 'tick5')" /><img src="img/check.svg" class="tick" id="tick5" />
+                    <div class="autofilled" id="autofilled4"><strong>Autofilled based on postcode</strong></div>
+                    <p>We need your business name to check your credit and see which tariffs you would be accepted for. This is a soft credit check and will not impact your score in any way.</p>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <!-- Email Address -->
+                <div class="question">
+                    <label class="large-label">Email Address</label>
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" placeholder="e.g. name@domain.com" onblur="toggleTick(this, 'tick6')" /><img src="img/check.svg" class="tick" id="tick6" />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="question">
+                    <label  class="large-label">Phone Number</label>
+                    <input type="number" pattern="[0-9]*" name="phone" autocomplete="tel" placeholder="e.g. 0200 000 0000" onblur="toggleTick(this, 'tick7')" /><img src="img/check.svg" class="tick" id="tick7" />
+                </div>
+            </div>
+
+            <div class="section">
+            <!-- DD Consent -->
+                <h3 style="margin-bottom:10px;">Would you like to pay by direct debit? You can get the cheapest rates this way.</h3>
+                <ul class="toggles">
+                        <li>
+                        <label class="yes" id="yesLabel2" onclick="radioClick(this, 'noLabel2', 'yesButton2', 'noButton2')">
+                            <input type="radio" name="optradio">
+                            <img id="yesButton2" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                            <div class="check_txt">Yes</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="no" id="noLabel2" onclick="radioClick(this, 'yesLabel2', 'noButton2', 'yesButton2'); document.getElementById('overlay').style.display='inline';">
+                                <input type="radio" name="optradio">
+                                <img id="noButton2" class="check_img" src="img/radio-unchecked.svg" width="24px" height="24px" />
+                                <div class="check_txt">No</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+        <a style="margin-top: 60px;" href="results.html" class="button">See 18 Results</a>
+    
+    </div>
+
+</body>
+
+</html>

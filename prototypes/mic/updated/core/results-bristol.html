@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+        var state = "monthly";
+    </script>
+</head>
+
+
+<body id="results">
+    <div id="header">
+        <img id="logo" src="img/logo.jpg">
+        <a href="tel:0200000000"><img id="phone" src="img/phone.jpg"></a>
+    </div>
+    
+    <div class="content">
+
+        <div>
+            <div id="results-header">
+                <h3>3 Results</h3>
+                <p>Based on 3 Filters</p>
+            </div>
+
+            <img id="monthy-yearly-toggle" src="img/monthly-prices.png"
+            onclick="
+                if (state == 'monthly'){
+                        document.getElementById('monthy-yearly-toggle').src='img/yearly-prices.png';
+                        document.getElementById('tariff-03').src='img/tariffs/yearly/tariff-03.png';
+                        document.getElementById('tariff-08').src='img/tariffs/yearly/tariff-08.png';
+                        document.getElementById('tariff-13').src='img/tariffs/yearly/tariff-13.png';
+                        state = 'yearly';
+                } else if (state == 'yearly') {
+                        document.getElementById('monthy-yearly-toggle').src='img/monthly-prices.png';
+                        document.getElementById('tariff-03').src='img/tariffs/monthly/tariff-03.png';
+                        document.getElementById('tariff-08').src='img/tariffs/monthly/tariff-08.png';
+                        document.getElementById('tariff-13').src='img/tariffs/monthly/tariff-13.png';
+                        state = 'monthly';
+                };"
+            >
+
+        </div>
+
+
+        <div id="tariffs-container">
+            <a href="tariff-details/03.html"><img class="tariff" id="tariff-03" src="img/tariffs/monthly/tariff-03.png"></a>
+            <a href="tariff-details/08.html"><img class="tariff" id="tariff-08" src="img/tariffs/monthly/tariff-08.png"></a>
+            <a href="tariff-details/13.html"><img class="tariff" id="tariff-13" src="img/tariffs/monthly/tariff-13.png"></a>
+        </div>
+
+        <div class="sticky-footer">
+                <a href="filters-01.html" class="button" id="help-me-choose">Help me Choose</a>
+        </div>
+    
+    </div>
+
+</body>
+
+</html>

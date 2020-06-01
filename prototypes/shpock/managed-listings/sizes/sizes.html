@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../styles/categories.css">
+        <link rel="stylesheet" type="text/css" href="../styles/segmented-control.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../scripts/segmented-control.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+
+    <div class="component">
+        <a href="../index.html"><img class="icon" src="../images/back.jpg"></a>
+        <p>Select a Size</p>
+    </div>
+
+    <div class="categories-content">
+
+        <main>
+            <div class="ios13-segmented-control">
+                <span class="selection"></span>
+    
+                <div class="option" id="tab-1">
+                    <input type="radio" id="first" name="sample" value="first" onclick="updateSizes(0);" checked>
+                    <label id="label-1" for="first">UK</label>
+                </div>
+    
+                <div class="option" id="tab-2">
+                    <input type="radio" id="second" name="sample" value="second" onclick="updateSizes(1);">
+                    <label id="label-2" for="second">International</label>
+                </div>
+    
+                <div class="option" id="tab-3">
+                    <input type="radio" id="third" name="sample" value="third" onclick="updateSizes(2);">
+                    <label id="label-3" for="third">EU</label>
+                </div>
+
+                <div class="option" id="tab-4">
+                    <input type="radio" id="fourth" name="sample" value="fourth" onclick="updateSizes(3);">
+                    <label id="label-4" for="fourth">One size</label>
+                </div>
+    
+            </div>
+        </main>
+
+        <ul id="sizes"></ul>
+    </div>
+
+    <script src="sizes.js"></script>
+
+    <script>
+        var selectedSizeType = localStorage.getItem('selectedSizeType');
+
+    </script>
+
+</html>
