@@ -33,7 +33,7 @@
         <div class="narrow-container">
                 <a class="back-button" href="../index.html"><img src="../images/arrow-black.png" height="20"></a>
                 <h1>Shpock</h1>
-                <p>Shpock is an online marketplace that has been around since 2012 with a focus on low-value items exchanged in person. After seeing success in the UK market, the company decided to shift towards a transactional model where higher value items from more aspirational brands are exchanged online.</p>
+                <p>Shpock is an online marketplace that has been around since 2012 with a focus on low-value items exchanged in person. After seeing success in the UK market, the company decided to shift towards a transactional model where higher value items from more aspirational brands are sold online.</p>
 
                 <div class="grey-box">
                         <div>
